@@ -7,11 +7,11 @@ docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-e
 ```  
 **然后执行：**   
 ```
-docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/
+docker cp /你的本地PHP文件地址/gdtv.php php-env:/var/www/html/
 ```   
 **访问地址：**
 ```
-http://你的IP:5678/cctv4k.php?id=xxx&xx=xxx...
+http://你的IP:5678/gdtv.php?id=xxx&xx=xxx...
 ``` 
 ### `gudou.php`使用方法：  
 1.需要在ROOT的安卓手机/安卓模拟器安装抓包工具（已在software目录提供），本套谷豆源码只适合安卓版本  
