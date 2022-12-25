@@ -2,9 +2,13 @@
 ## **为了保护仓库PHP源码，已经对源码进行不可逆的加密处理，使用方法如下：**
 ### **推荐使用肥羊PHP集成解密扩展Docker镜像：**  
 **一键运行：**  
-`docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env`  
+```
+docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env
+```  
 **然后执行：**   
-`docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/`   
+```
+docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/
+```   
 **访问地址：**
 `http://你的IP:5678/xxx.php?id=xxx&xx=xxx...`
 ### **如果直接运行，小白建议使用宝塔面板，PHP版本需要为8.1：**  
