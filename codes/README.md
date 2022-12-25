@@ -12,12 +12,7 @@ docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/
 **访问地址：**
 ```
 http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
-```
-### **如果直接运行，小白建议使用宝塔面板，PHP版本需要为8.1：**  
-1.首先将phpso文件夹中的扩展下载至你本地指定目录，比如`/home/php-so/tonyenc.so`  
-2.然后在PHP主配置文件添加`extension = /home/php-so/tonyenc.so`如果你不懂，可以用宝塔面板部署，如下图所示：
-![](https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/logo/jiami.jpg)
-3.添加完成后记得保存并重启服务器，然后访问PHP或使用PHP-CLI即可生效！  
+``` 
 ### `gudou.php`使用方法：  
 1.需要在ROOT的安卓手机/安卓模拟器安装抓包工具（已在software目录提供），本套谷豆源码只适合安卓版本  
 2.安装9004版谷豆（已在software目录提供）  
