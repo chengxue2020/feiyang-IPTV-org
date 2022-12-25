@@ -1,5 +1,5 @@
 # **使用说明：**
-## **为了保护仓库PHP源码，已经对源码进行加密处理，使用方法如下：**
+## **为了保护仓库PHP源码，已经对源码进行不可逆的加密处理，使用方法如下：**
 ### **推荐使用肥羊PHP加密代理Docker镜像：**  
 **一键运行：**  
 `docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env`  
