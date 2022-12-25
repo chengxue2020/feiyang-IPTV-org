@@ -1,0 +1,117 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="106" tvg-name="CCTV4K" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4k.png" group-title="谷豆本地",CCTV4K
+http://192.168.10.1:5678/gudou.php?id=4005
+#EXTINF:-1 tvg-id="7249" tvg-name="CCTV16" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="谷豆本地",CCTV16-4K
+http://192.168.10.1:5678/gudou.php?id=4010
+#EXTINF:-1 tvg-id="7251" tvg-name="广东综艺" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/GDTVENT.png" group-title="谷豆本地",广东综艺4K
+http://192.168.10.1:5678/gudou.php?id=GDZYHD4K_38000
+#EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="谷豆本地",CCTV1
+http://192.168.10.1:5678/gudou.php?id=CCTV1HD_7000
+#EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV2.png" group-title="谷豆本地",CCTV2
+http://192.168.10.1:5678/gudou.php?id=CCTV2HD_7000
+#EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV3.png" group-title="谷豆本地",CCTV3
+http://192.168.10.1:5678/gudou.php?id=CCTV3HD_7000
+#EXTINF:-1 tvg-id="4" tvg-name="CCTV4" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4.png" group-title="谷豆本地",CCTV4
+http://192.168.10.1:5678/gudou.php?id=CCTV-4HD_7500
+#EXTINF:-1 tvg-id="5" tvg-name="CCTV5" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5.png" group-title="谷豆本地",CCTV5
+http://192.168.10.1:5678/gudou.php?id=1605_4500
+#EXTINF:-1 tvg-id="6" tvg-name="CCTV5+" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5+.png" group-title="谷豆本地",CCTV5+
+http://192.168.10.1:5678/gudou.php?id=1403_4500
+#EXTINF:-1 tvg-id="7" tvg-name="CCTV6" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV6.png" group-title="谷豆本地",CCTV6
+http://192.168.10.1:5678/gudou.php?id=CCTV6HD_7000
+#EXTINF:-1 tvg-id="8" tvg-name="CCTV7" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV7.png" group-title="谷豆本地",CCTV7
+http://192.168.10.1:5678/gudou.php?id=CCTV7HD_7000
+#EXTINF:-1 tvg-id="9" tvg-name="CCTV8" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV8.png" group-title="谷豆本地",CCTV8
+http://192.168.10.1:5678/gudou.php?id=CCTV8HD_7000
+#EXTINF:-1 tvg-id="10" tvg-name="CCTV9" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV9.png" group-title="谷豆本地",CCTV9
+http://192.168.10.1:5678/gudou.php?id=CCTV9HD_7000
+#EXTINF:-1 tvg-id="11" tvg-name="CCTV10" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV10.png" group-title="谷豆本地",CCTV10
+http://192.168.10.1:5678/gudou.php?id=CCTV10HD_7000
+#EXTINF:-1 tvg-id="12" tvg-name="CCTV11" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV11.png" group-title="谷豆本地",CCTV11
+http://192.168.10.1:5678/gudou.php?id=CCTV-11HD_7500
+#EXTINF:-1 tvg-id="13" tvg-name="CCTV12" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV12.png" group-title="谷豆本地",CCTV12
+http://192.168.10.1:5678/gudou.php?id=CCTV12HD_7000
+#EXTINF:-1 tvg-id="14" tvg-name="CCTV13" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV13.png" group-title="谷豆本地",CCTV13
+http://192.168.10.1:5678/gudou.php?id=1613
+#EXTINF:-1 tvg-id="15" tvg-name="CCTV14" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV14.png" group-title="谷豆本地",CCTV14
+http://192.168.10.1:5678/gudou.php?id=CCTV14HD_7000
+#EXTINF:-1 tvg-id="16" tvg-name="CCTV15" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV15.png" group-title="谷豆本地",CCTV15
+http://192.168.10.1:5678/gudou.php?id=CCTV-15HD_7500
+#EXTINF:-1 tvg-id="7249" tvg-name="CCTV16" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="谷豆本地",CCTV16
+http://192.168.10.1:5678/gudou.php?id=1617_4500
+#EXTINF:-1 tvg-id="17" tvg-name="CCTV17" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV17.png" group-title="谷豆本地",CCTV17
+http://192.168.10.1:5678/gudou.php?id=CCTV17HD
+#EXTINF:-1 tvg-id="20" tvg-name="CGTN" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png" group-title="谷豆本地",CGTN-标清
+http://192.168.10.1:5678/gudou.php?id=CCTV15news_1500
+#EXTINF:-1 tvg-id="33" tvg-name="广东卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/guangdong.png" group-title="谷豆本地",广东卫视
+http://192.168.10.1:5678/gudou.php?id=guangdongHD_7000
+#EXTINF:-1 tvg-id="34" tvg-name="深圳卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/shenzhen.png" group-title="谷豆本地",深圳卫视
+http://192.168.10.1:5678/gudou.php?id=shenzhenHD_7000
+#EXTINF:-1 tvg-id="31" tvg-name="东方卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/dongfang.png" group-title="谷豆本地",东方卫视
+http://192.168.10.1:5678/gudou.php?id=dongfangHD_7000
+#EXTINF:-1 tvg-id="30" tvg-name="北京卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/beijing.png" group-title="谷豆本地",北京卫视
+http://192.168.10.1:5678/gudou.php?id=beijingHD_7000
+#EXTINF:-1 tvg-id="27" tvg-name="湖南卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/hunan.png" group-title="谷豆本地",湖南卫视
+http://192.168.10.1:5678/gudou.php?id=hunanHD_7000
+#EXTINF:-1 tvg-id="50" tvg-name="江西卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/jiangxi.png" group-title="谷豆本地",江西卫视
+http://192.168.10.1:5678/gudou.php?id=jiangxiHD_7000
+#EXTINF:-1 tvg-id="56" tvg-name="四川卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/sichuan.png" group-title="谷豆本地",四川卫视
+http://192.168.10.1:5678/gudou.php?id=sichuanHD_7000
+#EXTINF:-1 tvg-id="29" tvg-name="江苏卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/jiangsu.png" group-title="谷豆本地",江苏卫视
+http://192.168.10.1:5678/gudou.php?id=jiangsuHD_7000
+#EXTINF:-1 tvg-id="28" tvg-name="浙江卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/zhejiang.png" group-title="谷豆本地",浙江卫视
+http://192.168.10.1:5678/gudou.php?id=zhejiangHD_7000
+#EXTINF:-1 tvg-id="39" tvg-name="天津卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/tianjin.png" group-title="谷豆本地",天津卫视
+http://192.168.10.1:5678/gudou.php?id=1415_4500
+#EXTINF:-1 tvg-id="45" tvg-name="河北卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/hebei.png" group-title="谷豆本地",河北卫视
+http://192.168.10.1:5678/gudou.php?id=1426_4500
+#EXTINF:-1 tvg-id="40" tvg-name="重庆卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/chongqing.png" group-title="谷豆本地",重庆卫视
+http://192.168.10.1:5678/gudou.php?id=chongqingHD_7000
+#EXTINF:-1 tvg-id="44" tvg-name="贵州卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/guizhou.png" group-title="谷豆本地",贵州卫视
+http://192.168.10.1:5678/gudou.php?id=guizhouHD_7000
+#EXTINF:-1 tvg-id="36" tvg-name="辽宁卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/liaoning.png" group-title="谷豆本地",辽宁卫视
+http://192.168.10.1:5678/gudou.php?id=liaoningHD_7000
+#EXTINF:-1 tvg-id="48" tvg-name="湖北卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/hubei.png" group-title="谷豆本地",湖北卫视
+http://192.168.10.1:5678/gudou.php?id=hubeiHD_7000
+#EXTINF:-1 tvg-id="32" tvg-name="安徽卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/anhui.png" group-title="谷豆本地",安徽卫视
+http://192.168.10.1:5678/gudou.php?id=anhuiHD_7000
+#EXTINF:-1 tvg-id="46" tvg-name="黑龙江卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/heilongjiang.png" group-title="谷豆本地",黑龙江卫视
+http://192.168.10.1:5678/gudou.php?id=heilongjiangHD_7000
+#EXTINF:-1 tvg-id="37" tvg-name="旅游卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/lvyou.png" group-title="谷豆本地",海南卫视
+http://192.168.10.1:5678/gudou.php?id=1451_4500
+#EXTINF:-1 tvg-id="55" tvg-name="陕西卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/shanxi.png" group-title="谷豆本地",陕西卫视
+http://192.168.10.1:5678/gudou.php?id=1452_4500
+#EXTINF:-1 tvg-id="41" tvg-name="东南卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/dongnan.png" group-title="谷豆本地",东南卫视
+http://192.168.10.1:5678/gudou.php?id=dongnanweishiHD
+#EXTINF:-1 tvg-id="126" tvg-name="翡翠台" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/TVB翡翠台.png" group-title="谷豆本地",翡翠台
+http://192.168.10.1:5678/gudou.php?id=1350_4500
+#EXTINF:-1 tvg-id="127" tvg-name="明珠台" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/TVB明珠台.png" group-title="谷豆本地",明珠台
+http://192.168.10.1:5678/gudou.php?id=1351_4500
+#EXTINF:-1 tvg-id="141" tvg-name="凤凰中文" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png" group-title="谷豆本地",凤凰中文-标清
+http://192.168.10.1:5678/gudou.php?id=fhzw_1500
+#EXTINF:-1 tvg-id="" tvg-name="星空卫视" tvg-logo="https://pix1.tvzhe.com/images/logo/channel/XINGKONG1/XINGKONG1.jpg" group-title="谷豆本地",星空卫视-标清
+http://192.168.10.1:5678/gudou.php?id=xingkong_1500
+#EXTINF:-1 tvg-id="" tvg-name="澳亚卫视" tvg-logo="http://9102920.s21i.faiusr.com/4/ABUIABAEGAAgz8-cuAUoyO-DiAcw7Q047A0!300x300.png" group-title="谷豆本地",澳亚卫视-标清
+http://192.168.10.1:5678/gudou.php?id=aoya_1500
+#EXTINF:-1 tvg-id="6241" tvg-name="CHC高清电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/CHC3.jpg" group-title="谷豆本地",CHC高清电影
+http://192.168.10.1:5678/gudou.php?id=CHCHD_7000
+#EXTINF:-1 tvg-id="6244" tvg-name="求索记录" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/QSJL.png" group-title="谷豆本地",求索纪录
+http://192.168.10.1:5678/gudou.php?id=QSJLHD_7000
+#EXTINF:-1 tvg-id="6240" tvg-name="求索科学" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/QSKX.png" group-title="谷豆本地",求索科学
+http://192.168.10.1:5678/gudou.php?id=qiusuokexueHD_7000
+#EXTINF:-1 tvg-id="6242" tvg-name="求索动物" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/QSDW.png" group-title="谷豆本地",求索动物
+http://192.168.10.1:5678/gudou.php?id=QSDWHD_7000
+#EXTINF:-1 tvg-id="7242" tvg-name="魅力足球" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/meilizuqiu.png" group-title="谷豆本地",魅力足球
+http://192.168.10.1:5678/gudou.php?id=meiliyinyueHD_7000
+#EXTINF:-1 tvg-id="1964" tvg-name="劲爆体育" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/jinbaotiyu.jpg" group-title="谷豆本地",劲爆体育
+http://192.168.10.1:5678/gudou.php?id=jinbaotiyuHD_7000
+#EXTINF:-1 tvg-id="7125" tvg-name="珠江频道" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/zhujiang.png" group-title="谷豆本地",广东珠江
+http://192.168.10.1:5678/gudou.php?id=gdzhujiangHD_7500
+#EXTINF:-1 tvg-id="6013" tvg-name="广东体育" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/GDTV3.png" group-title="谷豆本地",广东体育
+http://192.168.10.1:5678/gudou.php?id=gdsportsHD_7000
+#EXTINF:-1 tvg-id="7252" tvg-name="广东经济" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/GDTVECO.png" group-title="谷豆本地",广东经济科教
+http://192.168.10.1:5678/gudou.php?id=GDjingjikejiaoHD_7000
+#EXTINF:-1 tvg-id="6016" tvg-name="广东新闻" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/GDTV6.png" group-title="谷豆本地",广东新闻-标清
+http://192.168.10.1:5678/gudou.php?id=gdnews_1500
+#EXTINF:-1 tvg-id="6014" tvg-name="广东公共" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/GDTV4.png" group-title="谷豆本地",广东公共-标清
+http://192.168.10.1:5678/gudou.php?id=gdpublic_1500
