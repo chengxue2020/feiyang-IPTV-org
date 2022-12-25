@@ -18,9 +18,11 @@ http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
 2.然后在PHP主配置文件添加`extension = /home/php-so/tonyenc.so`如果你不懂，可以用宝塔面板部署，如下图所示：
 ![](https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/logo/jiami.jpg)
 3.添加完成后记得保存并重启服务器，然后访问PHP或使用PHP-CLI即可生效！  
-### `gudou.php`使用方法：
-需要在ROOT的安卓手机安装抓包工具（抓包精灵/小黄鸟），并安装9004版谷豆（腾讯应用宝下载），然后登录自己的手机号码，开启抓包后筛选关键词aut002，然后puser是你的手机号，你需要记录`ptoken`和`pserialnumber`以及`cid`，本源码只适合安卓版本！！  
-最后访问
+### `gudou.php`使用方法：  
+1.需要在ROOT的安卓手机安装抓包工具（抓包精灵/小黄鸟）  
+2.安装9004版谷豆（腾讯应用宝/豌豆助手历史版本下载）  
+3.注册并登录自己的手机号码，开启抓包后筛选关键词aut002，然后puser是你的手机号，你需要记录`ptoken`和`pserialnumber`以及`cid`  
+4.谷豆源码只适合安卓版本，最后访问∶  
 ```
 http://xxx.xxx.xxx:xxx/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserialnumber=你的pserialnumber&cid=你的cid&id=谷豆频道对应id
 ```
