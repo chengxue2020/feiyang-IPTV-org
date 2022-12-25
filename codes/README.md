@@ -10,7 +10,9 @@ docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-e
 docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/
 ```   
 **访问地址：**
-`http://你的IP:5678/xxx.php?id=xxx&xx=xxx...`
+```
+http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
+```
 ### **如果直接运行，小白建议使用宝塔面板，PHP版本需要为8.1：**  
 1.首先将phpso文件夹中的扩展下载至你本地指定目录，比如`/home/php-so/tonyenc.so`  
 2.然后在PHP主配置文件添加`extension = /home/php-so/tonyenc.so`如果你不懂，可以用宝塔面板部署，如下图所示：
