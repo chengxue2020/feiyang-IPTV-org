@@ -7,7 +7,7 @@ docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-e
 ```  
 **然后执行：**   
 ```
-docker cp /你的本地PHP文件目录/gdtv.php php-env:/var/www/html/
+docker cp /你的本地PHP文件下载目录/gdtv.php php-env:/var/www/html/
 ```   
 **访问地址：**
 ```
