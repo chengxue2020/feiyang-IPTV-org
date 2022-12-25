@@ -19,8 +19,8 @@ http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
 ![](https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/logo/jiami.jpg)
 3.添加完成后记得保存并重启服务器，然后访问PHP或使用PHP-CLI即可生效！  
 ### `gudou.php`使用方法：  
-1.需要在ROOT的安卓手机/安卓模拟器安装抓包工具（抓包精灵/小黄鸟），本套谷豆源码只适合安卓版本！  
-2.安装9004版谷豆（腾讯应用宝/豌豆助手历史版本下载）  
+1.需要在ROOT的安卓手机/安卓模拟器安装抓包工具（已在software目录提供），本套谷豆源码只适合安卓版本  
+2.安装9004版谷豆（已在software目录提供）  
 3.注册并登录自己的手机号码，开启抓包后筛选关键词aut002，然后puser是你的手机号，你需要记录`ptoken`和`pserialnumber`以及`cid`  
 4.最后在IPTV播放器访问∶  
 ```
