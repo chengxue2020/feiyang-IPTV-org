@@ -3,8 +3,6 @@
 ### **推荐使用肥羊PHP加密代理Docker镜像：**  
 **amd64版**  
 `docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env:amd64`  
-**arm64版**  
-`docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env:arm64`  
 **然后执行：**   
 `docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/`   
 **访问地址：**
