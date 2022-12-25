@@ -21,5 +21,6 @@ http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
 ### `gudou.php`使用方法：
 需要在ROOT的安卓手机安装抓包工具（抓包精灵/小黄鸟），并安装9004版谷豆（腾讯应用宝下载），然后登录自己的手机号码，开启抓包后筛选关键词aut002，然后puser是你的手机号，你需要记录`ptoken`和`pserialnumber`以及`cid`，本源码只适合安卓版本！！  
 最后访问
-```http://xxx.xxx.xxx:xxx/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserialnumber=你的pserialnumber&cid=你的cid&id=谷豆频道对应id
+```
+http://xxx.xxx.xxx:xxx/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserialnumber=你的pserialnumber&cid=你的cid&id=谷豆频道对应id
 ```
