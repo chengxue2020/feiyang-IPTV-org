@@ -1,18 +1,23 @@
 # **使用说明：**
 ## **为了保护仓库PHP源码，已经对源码进行不可逆的加密处理，使用方法如下：**
 ### **推荐使用肥羊PHP集成解密扩展Docker镜像：**  
-**一键运行：**  
+### **一键运行：**  
+**amd64架构：**  
 ```
 docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env
 ```  
-**然后执行：**   
+**arm64架构：**  
 ```
-docker cp /你本地PHP文件存放目录/gdtv.php php-env:/var/www/html/
+docker run -d --restart unless-stopped --privileged=true -p 5678:80 --name php-env youshandefeiyang/php-env:arm64
+```  
+### **然后执行：**   
+```
+docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/
 ```   
-**访问地址：**
+### **访问地址：**
 ```
-http://你的IP:5678/gdtv.php?id=xxx&xx=xxx...
-``` 
+http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
+```
 ### `gudou.php`使用方法：  
 1.需要在ROOT的安卓手机/安卓模拟器安装抓包工具（已在software目录提供），本套谷豆源码只适合安卓版本  
 2.安装9004版谷豆（已在software目录提供）  
