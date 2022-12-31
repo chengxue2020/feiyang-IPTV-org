@@ -26,4 +26,4 @@ http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
 ```
 http://你的IP:5678/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserialnumber=你的pserialnumber&cid=你的cid&id=谷豆频道对应id
 ```
-### 小白可以直接参考`教程`目录里面的教程
+### 小白可以直接参考`教程`目录里面的教程，视频教程∶[点击观看](https://v1.mk/php)
