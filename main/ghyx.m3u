@@ -40,7 +40,7 @@ http://192.168.10.1:5678/ghyx.php?id=GeHuadaoshiHD_6000
 #EXTINF:-1,tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://epg.112114.xyz/logo/CHC家庭影院.png" group-title="其他",CHC家庭影院 标清
 http://192.168.10.1:5678/ghyx.php?id=CHCHD_2000
 #EXTINF:-1,tvg-id="CHC高清电影" tvg-name="CHC高清电影" tvg-logo="https://epg.112114.xyz/logo/CHC高清电影.png" group-title="其他",CHC高清电影
-http://192.168.10.1:5678/ghyx.php?id=CHCHD_6000
+http://192.168.10.1:5678/ghyx.php?id=CHCHD2_6000
 #EXTINF:-1,tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://epg.112114.xyz/logo/CHC动作电影.png" group-title="其他",CHC动作电影 标清
 http://192.168.10.1:5678/ghyx.php?id=MotionHD_2000
 #EXTINF:-1,tvg-id="SITV都市剧场" tvg-name="SITV都市剧场" tvg-logo="https://epg.112114.xyz/logo/SITV都市剧场.png" group-title="其他",都市剧场
@@ -187,8 +187,8 @@ http://192.168.10.1:5678/ghyx.php?id=HuanQiuLvYouHD_2000
 http://192.168.10.1:5678/ghyx.php?id=ZhongShiGouWuHD_2000
 #EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/央广购物.png" group-title="其他",央广购物 标清
 http://192.168.10.1:5678/ghyx.php?id=YangShiGouWuHD_2000
-#EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/聚鲨环球精选.png" group-title="其他",聚鲨环球精选 标清
-http://192.168.10.1:5678/ghyx.php?id=GHS_1200
+#EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/聚鲨环球精选.png" group-title="其他",聚鲨环球精选
+http://192.168.10.1:5678/ghyx.php?id=GHSHD_6000
 #EXTINF:-1,tvg-id="" tvg-name="" tvg-logo="https://epg.112114.xyz/logo/动感音乐.png" group-title="其他",动感音乐 标清
 http://192.168.10.1:5678/ghyx.php?id=DongGanYinYueHD_2000
 #EXTINF:-1,tvg-id="收藏天下" tvg-name="收藏天下" tvg-logo="https://epg.112114.xyz/logo/收藏天下.png" group-title="其他",收藏天下 标清
