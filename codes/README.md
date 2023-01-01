@@ -27,6 +27,6 @@ http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
 http://你的IP:5678/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserialnumber=你的pserialnumber&cid=你的cid&id=谷豆频道对应id
 ```
 ### `allinone.php`使用方法： 
-**`allinone.php`为`抖音`，`虎牙`，`哔哩哔哩`，`斗鱼`四个平台的直播源代理程序聚合版，使用教程如下：**  
+**`allinone.php`为`抖音`、`虎牙`、`哔哩哔哩`、`斗鱼`四个平台的直播源代理程序聚合版，使用教程如下：**  
 
 ### 小白可以直接参考视频教程∶[点击观看](https://v1.mk/php)
