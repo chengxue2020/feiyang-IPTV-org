@@ -28,5 +28,8 @@ http://你的IP:5678/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserial
 ```
 ### `allinone.php`使用方法： 
 **`allinone.php`为`抖音`、`虎牙`、`哔哩哔哩`、`斗鱼`四个平台的直播源代理程序聚合版，使用教程如下：**  
-
+1.抖音传参：http://你的IP:5678/allinone.php?douyinid=`live.douyin.com/后面的数字`
+2.安装9004版谷豆（已在software目录提供）  
+3.注册并登录自己的手机号码，开启抓包后筛选关键词`aut002`，然后`puser`是你的手机号，你需要记录`ptoken`和`pserialnumber`以及`cid`  
+4.最后在IPTV播放器访问∶  
 ### 小白可以直接参考视频教程∶[点击观看](https://v1.mk/php)
