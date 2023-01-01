@@ -28,8 +28,20 @@ http://你的IP:5678/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserial
 ```
 ### `allinone.php`使用方法： 
 **`allinone.php`为`抖音`、`虎牙`、`哔哩哔哩`、`斗鱼`四个平台的直播源代理程序聚合版，使用教程如下：**  
-1.抖音传参：`http://你的IP:5678/allinone.php?douyinid=live.douyin.com/后面的数字（不包含"live.douyin.com/"，仅仅是后面的数字）`  
-2.虎牙传参：`http://你的IP:5678/allinone.php?huyaid=www.huya.com/后面的数字（不包含"www.huya.com/"，仅仅是后面的数字）`   
-3.哔哩哔哩传参：`http://你的IP:5678/allinone.php?douyinid=live.bilibili.com/后面的数字（不包含"live.bilibili.com/"，仅仅是后面的数字）`   
-4.斗鱼传参：`http://你的IP:5678/allinone.php?douyinid=www.douyu.com/topic/xxxxx?rid=后面的数字（不包含"www.douyu.com/topic/xxxxx?rid="，仅仅是后面的数字）`   
+1.抖音传参：
+```
+http://你的IP:5678/allinone.php?douyinid=live.douyin.com/后面的数字（不包含"live.douyin.com/"，仅仅是后面的数字）
+``` 
+2.虎牙传参：
+```
+http://你的IP:5678/allinone.php?huyaid=www.huya.com/后面的数字（不包含"www.huya.com/"，仅仅是后面的数字）
+```   
+3.哔哩哔哩传参：
+```
+http://你的IP:5678/allinone.php?douyinid=live.bilibili.com/后面的数字（不包含"live.bilibili.com/"，仅仅是后面的数字）
+```   
+4.斗鱼传参：
+```
+http://你的IP:5678/allinone.php?douyinid=www.douyu.com/topic/xxxxx?rid=后面的数字（不包含"www.douyu.com/topic/xxxxx?rid="，仅仅是后面的数字）
+```   
 ### 小白可以直接参考视频教程∶[点击观看](https://v1.mk/php)
