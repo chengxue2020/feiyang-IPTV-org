@@ -38,10 +38,10 @@ http://你的IP:5678/allinone.php?huyaid=www.huya.com/后面的数字（不包�
 ```   
 3.哔哩哔哩传参：
 ```
-http://你的IP:5678/allinone.php?douyinid=live.bilibili.com/后面的数字（不包含"live.bilibili.com/"，仅仅是后面的数字）
+http://你的IP:5678/allinone.php?biliid=live.bilibili.com/后面的数字（不包含"live.bilibili.com/"，仅仅是后面的数字）
 ```   
 4.斗鱼传参：
 ```
-http://你的IP:5678/allinone.php?douyinid=www.douyu.com/topic/xxxxx?rid=后面的数字（不包含"www.douyu.com/topic/xxxxx?rid="，仅仅是后面的数字）
+http://你的IP:5678/allinone.php?douyuid=www.douyu.com/topic/xxxxx?rid=后面的数字（不包含"www.douyu.com/topic/xxxxx?rid="，仅仅是后面的数字）
 ```   
 ### 小白可以直接参考视频教程∶[点击观看](https://v1.mk/php)
