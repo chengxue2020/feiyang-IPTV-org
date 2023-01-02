@@ -16,11 +16,12 @@ CCTV16-4K-25PHLG源,http://live.cooltv.top/tv/aishang.php?id=cctv164k
 CCTV16-4K-50P-HLG小果源,http://159.75.85.63:5681/sxg.php?id=CCTV-16-4K_8000
 CCTV16-4K-50P-IPV6-HLG源,http://[2409:8087:2001:20:2800:0:df6e:eb18]/ott.mobaibox.com/PLTV/3/224/3221228127/index.m3u8
 爱上4K,http://111.20.40.170/PLTV/88888893/224/3221226352/index.m3u8
-北京IPTV-4K,http://219.142.147.225:9901/tsfile/live/1011_1.m3u8
-北京BesTV-4K,http://221.179.217.76/PLTV/88888888/224/3221226550/1.m3u8
+北京IPTV-4K,http://221.179.217.76/PLTV/88888888/224/3221226550/1.m3u8
+BesTV-4K,http://74.119.193.113:8280/live/bestv4k/hls.m3u8
 4K影视,http://111.11.123.37:6610/000000001000/6000000003000004748/index.m3u8?channel-id=wasusyt&Contentid=6000000003000004748&livemode=1&stbId=3
 河南4K,http://74.119.193.113:8280/live/hn4k/hls.m3u8
 4K超高清电影,http://159.75.85.63:5681/sxg.php
+斗鱼4K,http://epg.112114.xyz/douyu/9249162
 咪咕体育-4K-SDR源,http://120.234.220.107:9000/udp/239.20.0.66:3136
 咪咕体育-4K-HLG源,http://117.136.156.66:80/000000001000/3000000010000005180/index.m3u8
 咪咕体育-4K-HLG源-1,http://117.136.156.71:80/000000001000/3000000010000005180/index.m3u8
@@ -72,7 +73,7 @@ Eleven Sports 1 4K备,http://4iptv.xyz:8080/1smart15209/jg8Gd5HqDRBE/154014
 Sport5 4k,http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=59033&extension=ts&play_token=h3Jb2BBUAL
 Матч 4k,http://cdn.spmr.tv:8080/w60cdr/video.m3u8?token=HRUNWEM0Q2
 TRT 4k,http://cdnx1.plusx.tv:8880/TRTInternational/mono.m3u8?token=cb776083b1e1b6f9bb2222
-TRT 4k备,http://4iptv.xyz:8080/1smart15209/jg8Gd5HqDRBE/141812
+TRT 4k备,http://cineapp.org:8000/zbigniew/zbigniew/18349
 DIGI 4k,http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=90814&extension=ts&play_token=AB1RNoAhBm
 DIGI 4k备,http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/34585
 Rai 4k,http://4iptv.xyz:8080/1smart15209/jg8Gd5HqDRBE/173531
@@ -97,7 +98,6 @@ Clarity4K,https://d3thiix3tzne5u.cloudfront.net/playlist2160p.m3u8
 MUZZIK ZZ4000 4K,http://muzzik-live.morescreens.com/mts-a6/playlist.m3u8
 loupe 4K,https://d2dw21aq0j0l5c.cloudfront.net/playlist_3840x2160.m3u8
 Bloomberg TV+ 4K,https://bloomberg-bloombergtv-1-gb.samsung.wurl.com/manifest/playlist.m3u8
-斗鱼4K,http://epg.112114.xyz/douyu/9249162
 CCTV-8K-测试源,http://74.119.193.113:8280/live/cctv8k/hls.m3u8
 江苏8K测试,http://ott.mobaibox.com/PLTV/3/224/3221228132/index.m3u8
 YOSSO TV 4K,http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/16153/index.m3u8
