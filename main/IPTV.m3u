@@ -45,6 +45,8 @@ http://111.11.123.37:6610/000000001000/6000000003000004748/index.m3u8?channel-id
 http://74.119.193.113:8280/live/hn4k/hls.m3u8
 #EXTINF:-1 tvg-name="4K超高清电影" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/4kcgq.png" group-title="4K频道",4K超高清电影
 http://159.75.85.63:5681/sxg.php
+#EXTINF:-1 tvg-name="斗鱼4K" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/IPTV%E7%BB%8F%E5%85%B8%E7%94%B5%E5%BD%B1.png" group-title="4K频道",斗鱼4K
+http://epg.112114.xyz/douyu/9249162
 #EXTINF:-1 tvg-name="咪咕体育-4K-SDR源" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/mg4k.png" group-title="4K频道",咪咕体育-4K-SDR源
 http://120.234.220.107:9000/udp/239.20.0.66:3136
 #EXTINF:-1 tvg-name="咪咕体育-4K-HLG源" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/mg4k.png" group-title="4K频道",咪咕体育-4K-HLG源
@@ -197,8 +199,6 @@ http://muzzik-live.morescreens.com/mts-a6/playlist.m3u8
 https://d2dw21aq0j0l5c.cloudfront.net/playlist_3840x2160.m3u8
 #EXTINF:-1 tvg-name="BloombergTV" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/BloombergTV.png" group-title="4K频道", Bloomberg TV+ 4K
 https://bloomberg-bloombergtv-1-gb.samsung.wurl.com/manifest/playlist.m3u8
-#EXTINF:-1 tvg-name="斗鱼4K" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/IPTV%E7%BB%8F%E5%85%B8%E7%94%B5%E5%BD%B1.png" group-title="4K频道",斗鱼4K
-http://epg.112114.xyz/douyu/9249162
 #EXTINF:-1 tvg-name="CCTV-8K-组播AVS3源" tvg-logo="https://epg.112114.xyz/logo/CCTV8K.png" group-title="8K频道",CCTV-8K-测试源
 http://74.119.193.113:8280/live/cctv8k/hls.m3u8
 #EXTINF:-1 tvg-id="江苏8K测试" tvg-name="江苏8K测试" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/js8k.png" group-title="8K频道",江苏8K测试
