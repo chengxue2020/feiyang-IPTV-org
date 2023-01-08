@@ -73,12 +73,6 @@ http://line.tektv.live/play/live.php?mac=00:1A:79:A8:0E:7F&extension=ts&play_tok
 http://sheriffwoody.in:80/Jeff1/Jeff1/3157685
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/A242991D-4F59-4672-B511-35DB36738987.jpeg" group-title="4K频道",Quadro 4K
 http://91.207.180.142/Quadro4K/index.m3u8
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/5580CF3C-56BE-4D72-B0D3-F37E958D04A5.png" group-title="4K频道",Museum 4k
-http://cdnx1.plusx.tv:8880/Museum/mono.m3u8?token=cb776083b1e1b6f9bb2222
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/D96BA100-97AC-43BA-BA62-64F577B51BEF.png" group-title="4K频道",Home 4k
-http://cdnx1.plusx.tv:8880/316/mono.m3u8?token=cb776083b1e1b6f9bb2222
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/E73EC167-1255-433F-99D2-E8C78EF5B199.png" group-title="4K频道",Heritage 4k
-http://cdnx1.plusx.tv:8880/Heritage/mono.m3u8?token=cb776083b1e1b6f9bb2222
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/8536BA37-2A68-438E-97C8-D7FD2CED5B14.jpeg" group-title="4K频道",V Sports UHD
 http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:bf:85:ce&stream=35891&extension=ts&play_token=Z1hXUmbsiM
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/8536BA37-2A68-438E-97C8-D7FD2CED5B14.jpeg" group-title="4K频道",V Sports UHD备
