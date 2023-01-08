@@ -164,7 +164,7 @@ http://cdnx1.plusx.tv:8880/C4K360/mono.m3u8?token=cb776083b1e1b6f9bb2222
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/334C2EE2-E85E-44CA-A0F1-7168162331CD.png" group-title="4K频道",TVP 4k
 http://barebudget.h1ott.com:80/play/live.php?mac=00:1a:79:27:1f:ef&stream=1057230&extension=ts&play_token=FFHcEjJdsM
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/334C2EE2-E85E-44CA-A0F1-7168162331CD.png" group-title="4K频道",TVP 4k-1
-http://cdnx1.plusx.tv:8880/tvp4kw/mono.m3u8?token=cb776083b1e1b6f9bb2222
+http://pro.ipcover.tv:8080/baldefamily33300/baldefamily123497/152182
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/334C2EE2-E85E-44CA-A0F1-7168162331CD.png" group-title="4K频道",TVP 4k-2
 http://cdn.spmr.tv:8080/dTsI28/video.m3u8?token=HRUNWEM0Q2
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/Kino.png" group-title="4K频道",KINO 4K
