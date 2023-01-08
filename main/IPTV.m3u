@@ -83,48 +83,10 @@ http://theking365tv.ws:2103/play/live.php?mac=00:1A:79:5c:f4:67&stream=24083&ext
 http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/290744.ts
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7B3FC511-989B-40A3-8F05-0AE950AD71DD.png" group-title="4K频道",TF1 4K
 http://pro.ipcover.tv:8080/baldefamily33300/baldefamily123497/152182
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7B3FC511-989B-40A3-8F05-0AE950AD71DD.png" group-title="4K频道",TF1 4K备
-http://cineapp.org:8000/zbigniew/zbigniew/166354
-#EXTINF:-1 tvg-name="CANAL+ UHD" tvg-logo="https://media.info/i/lf/600/1503863982/6844.png" group-title="4K频道",CANAL+ UHD
-http://cineapp.org:8000/zbigniew/zbigniew/166355
-#EXTINF:-1 tvg-name="CANAL+ LDC UHD" tvg-logo="https://media.info/i/lf/600/1503863982/6844.png" group-title="4K频道",CANAL+ LDC UHD
-http://cineapp.org:8000/zbigniew/zbigniew/166356
-#EXTINF:-1 tvg-name="Evenement UHD" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/evenement.png" group-title="4K频道",Evenement UHD
-http://cineapp.org:8000/zbigniew/zbigniew/166357
-#EXTINF:-1 tvg-name="BOX OFFICE CANAL+ UHD" tvg-logo="https://media.info/i/lf/600/1503863982/6844.png" group-title="4K频道",BOX OFFICE CANAL+ UHD
-http://cineapp.org:8000/zbigniew/zbigniew/166359
-#EXTINF:-1 tvg-name="Prima Sport 4K" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/5b/Prima_4K.svg/revision/latest/scale-to-width-down/250?cb=20220419155437" group-title="4K频道",Prima Sport 4K
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/62774
-#EXTINF:-1 tvg-name="Eurosport 4K" tvg-logo="https://iptv-pro.github.io/logo/EUROSPORT.png" group-title="4K频道",Eurosport 4K
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/53743
 #EXTINF:-1 tvg-name="Ziggo Sport 4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/ziggo.png" group-title="4K频道",Ziggo Sport 4K
 http://live.iptvtotaal.com:8000/awpreneniptv/09HZaVeOmh/20560
-#EXTINF:-1 tvg-name="FILM 24/7 UHD" tvg-logo="http://vignette1.wikia.nocookie.net/memoryalpha/images/e/e7/4K_Ultra_HD_logo.jpg/revision/latest?cb=20160409040432&path-prefix=en" group-title="4K频道",FILM 24/7 UHD
-http://x01.live:8080/5jpdeCex5H/aW2QpBqZTV/216226
-#EXTINF:-1 tvg-name="FILM 24/7 UHD 2" tvg-logo="http://vignette1.wikia.nocookie.net/memoryalpha/images/e/e7/4K_Ultra_HD_logo.jpg/revision/latest?cb=20160409040432&path-prefix=en" group-title="4K频道",FILM 24/7 UHD 2
-http://x01.live:8080/5jpdeCex5H/aW2QpBqZTV/216227
-#EXTINF:-1 tvg-name="ARES CINEMA 4K" tvg-logo="http://vignette1.wikia.nocookie.net/memoryalpha/images/e/e7/4K_Ultra_HD_logo.jpg/revision/latest?cb=20160409040432&path-prefix=en" group-title="4K频道",ARES CINEMA 4K
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/80107
-#EXTINF:-1 tvg-name="Magura Media 4k" tvg-logo="http://vignette1.wikia.nocookie.net/memoryalpha/images/e/e7/4K_Ultra_HD_logo.jpg/revision/latest?cb=20160409040432&path-prefix=en" group-title="4K频道",Magura Media 4k
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/37414
-#EXTINF:-1 tvg-name="Premium Film 4K" tvg-logo="http://vignette1.wikia.nocookie.net/memoryalpha/images/e/e7/4K_Ultra_HD_logo.jpg/revision/latest?cb=20160409040432&path-prefix=en" group-title="4K频道",Premium Film 4K
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/53102
-#EXTINF:-1 tvg-name="FluxRO 4K" tvg-logo="http://vignette1.wikia.nocookie.net/memoryalpha/images/e/e7/4K_Ultra_HD_logo.jpg/revision/latest?cb=20160409040432&path-prefix=en" group-title="4K频道",FluxRO 4K
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/95468
-#EXTINF:-1 tvg-name="IMPACT Filme 4K" tvg-logo="https://thumbs.dreamstime.com/z/impact-colored-rainbow-word-text-suitable-logo-design-card-brochure-typography-127992653.jpg" group-title="4K频道",IMPACT Filme 4K
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/95902
 #EXTINF:-1 tvg-name="RTL UHD" tvg-logo="https://media.info/i/lf/600/1507473884/6934.png" group-title="4K频道",RTL UHD
 http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/29821.ts
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/fox.png" group-title="4K频道",FOX US 4K
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/484693
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/fox1.png" group-title="4K频道",FOX 1 Sports US 4K
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/484692
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/fussballtv.png" group-title="4K频道",FUSSBALLTV 2 UHD
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/484703
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/fussballtv.png" group-title="4K频道",FUSSBALLTV 3 UHD
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/484704
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/CCDBAF02-697F-484F-B94B-942172A47F58.jpeg" group-title="4K频道",BT Sport Ultimate 4K
-http://sheriffwoody.in:80/live/Jeff1/Jeff1/1042157.ts
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/EDD40422-068B-429C-80B0-F210D515DF2C.png" group-title="4K频道",Hub Premier Sport 4K
 http://tvt3.xyz:2095/play/live.php?mac=00:1A:79:00:04:02&stream=348096&extension=ts&play_token=zpHQS3jtnW
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/DBA793B1-61D9-48FD-B2DA-F0B8EA9CC24C.jpeg" group-title="4K频道",DAZN F1 UHD 4K
@@ -135,8 +97,6 @@ http://tribaliptv.com:8080/Gustavo/123456/12401
 http://tribaliptv.com:8080/Gustavo/123456/5195
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/eleven.png" group-title="4K频道",Eleven Sports 1 4K
 http://cdnx1.plusx.tv:8880/325es4k/mono.m3u8?token=cb776083b1e1b6f9bb2222
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/eleven.png" group-title="4K频道",Eleven Sports 1 4K备
-http://4iptv.xyz:8080/1smart15209/jg8Gd5HqDRBE/154014
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/EA0DA749-7DA9-420C-A40A-EE49E75B1C37.png" group-title="4K频道",Sport5 4k
 http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=59033&extension=ts&play_token=h3Jb2BBUAL
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/3CE30C63-5731-400F-B187-3B0AE5BD4100.jpeg" group-title="4K频道",Матч 4k
@@ -147,26 +107,6 @@ http://1x.avrupatv.xyz:8080/Murat3434/Ilker34/38904
 http://4e87b8a2.rossteleccom.net/iptv/UWSCNHYFPPFSA5/4001/index.m3u8
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/Digi_4K_29.png" group-title="4K频道",DIGI 4k
 http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=90814&extension=ts&play_token=AB1RNoAhBm
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/Digi_4K_29.png" group-title="4K频道",DIGI 4k备
-http://v1.nddarsenio.com:8008/Mihai_costin./h3JuTsE/34585
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/56A2DFC4-1E3F-4950-A5B8-A027EFA55A8F.png" group-title="4K频道",Rai 4k
-http://4iptv.xyz:8080/1smart15209/jg8Gd5HqDRBE/173531
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/56A2DFC4-1E3F-4950-A5B8-A027EFA55A8F.png" group-title="4K频道",Rai 4k备
-http://cdn.spmr.tv:8080/25cfpq/video.m3u8?token=HRUNWEM0Q2
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/F3B43183-0B32-4AD3-8AD6-A5CF7197B78A.png" group-title="4K频道",C4k360
-http://cdnx1.plusx.tv:8880/C4K360/mono.m3u8?token=cb776083b1e1b6f9bb2222
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/334C2EE2-E85E-44CA-A0F1-7168162331CD.png" group-title="4K频道",TVP 4k
-http://barebudget.h1ott.com:80/play/live.php?mac=00:1a:79:27:1f:ef&stream=1057230&extension=ts&play_token=FFHcEjJdsM
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/334C2EE2-E85E-44CA-A0F1-7168162331CD.png" group-title="4K频道",TVP 4k备
-http://cdn.spmr.tv:8080/dTsI28/video.m3u8?token=HRUNWEM0Q2
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/Kino.png" group-title="4K频道",KINO 4K
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/234326
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/os.png" group-title="4K频道",Our Siberia 4K
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/234329
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/serial4k.png" group-title="4K频道",SERIAL 4K
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/234325
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/ultracinema.png" group-title="4K频道",Ultra Cinema UHD
-http://abc123.digital:8080/rchatosilva@yahoo.com/FdDWc56brW/234331
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/8162C678-8100-4A6C-8DE6-F7544FE95A93.jpeg" group-title="4K频道",VTC13 4K
 http://vcdn1.vtc.gov.vn:1935/m_4k/smil:4k.smil/playlist.m3u8?$3840x2160
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/D4DF7DB2-18A8-4A2B-B8ED-BAF244CC33FC.png" group-title="4K频道",Insight UHD
