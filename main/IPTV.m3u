@@ -59,13 +59,13 @@ http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=348094&
 http://line.tektv.live/play/live.php?mac=00:1A:79:A8:0E:7F&extension=ts&play_token=KdOGLwAyZf&stream=1016544
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/308_144.png" group-title="4K频道",Astro Super Sport 4K-3
 http://ultratv.one:2095/xMsGHAzQ/kYuckAK/348094
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7AC86388-6842-40B1-A22B-E835B4800BC9.jpeg" group-title="4K频道",Now Sports UHD HK
+#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/nowsports4k.PNG" group-title="4K频道",Now Sports UHD HK
 http://sheriffwoody.in:80/live/Jeff1/Jeff1/1042156.ts
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7AC86388-6842-40B1-A22B-E835B4800BC9.jpeg" group-title="4K频道",Now Sports UHD HK-1
+#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/nowsports4k.PNG" group-title="4K频道",Now Sports UHD HK-1
 http://ultratv.one:2095/xMsGHAzQ/kYuckAK/117957
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7AC86388-6842-40B1-A22B-E835B4800BC9.jpeg" group-title="4K频道",Now Sports UHD HK-2
+#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/nowsports4k.PNG" group-title="4K频道",Now Sports UHD HK-2
 http://line.tektv.live/play/live.php?mac=00:1A:79:A8:0E:7F&extension=ts&play_token=KdOGLwAyZf&stream=1032489
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7AC86388-6842-40B1-A22B-E835B4800BC9.jpeg" group-title="4K频道",Now Sports UHD HK-3
+#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/nowsports4k.PNG" group-title="4K频道",Now Sports UHD HK-3
 http://abc123.digital:8080/R9YN4ecdXe/Zpe9M7mxtq/332715
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/8536BA37-2A68-438E-97C8-D7FD2CED5B14.jpeg" group-title="4K频道",V Sports UHD
 http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:bf:85:ce&stream=35891&extension=ts&play_token=Z1hXUmbsiM
