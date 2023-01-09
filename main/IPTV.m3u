@@ -31,8 +31,6 @@ http://111.11.123.31:6610/000000001000/5000000008000023254/index.m3u8?stbId=3&li
 http://live.cooltv.top/tv/aishang.php?id=cctv164k
 #EXTINF:-1 tvg-name="CCTV16-4K-50P-HLG小果源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K-50P-HLG小果源
 http://159.75.85.63:5681/sxg.php?id=CCTV-16-4K_8000
-#EXTINF:-1 tvg-name="CCTV16-4K-50P-IPV6-HLG源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K-50P-IPV6-HLG源
-http://[2409:8087:2001:20:2800:0:df6e:eb18]/ott.mobaibox.com/PLTV/3/224/3221228127/index.m3u8
 #EXTINF:-1 tvg-name="爱上4K" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/aishang4k.png" group-title="4K频道",爱上4K
 http://111.20.40.170/PLTV/88888893/224/3221226352/index.m3u8
 #EXTINF:-1 tvg-name="北京IPTV-4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/EE6DBA9B-428F-460D-BAE3-5480771810C0.jpeg" group-title="4K频道",北京IPTV-4K
@@ -79,8 +77,6 @@ http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:bf:85:ce&stream=35891&e
 http://ultratv.one:2095/xMsGHAzQ/kYuckAK/31644
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/143A81D2-1039-4A83-8C5F-5E1E207AC977.png" group-title="4K频道",BeIN Sports 4K
 http://theking365tv.ws:2103/play/live.php?mac=00:1A:79:5c:f4:67&stream=24083&extension=ts&play_token=70AEFyMfql
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/482E2AAC-C5ED-4F1A-A212-D68171CDEE14.jpeg" group-title="4K频道",Sky Sport UHD
-http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/290744.ts
 #EXTINF:-1 tvg-name="Evenement UHD" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/evenement.png" group-title="4K频道",Evenement UHD
 http://abc123.digital:8080/R9YN4ecdXe/Zpe9M7mxtq/496756
 #EXTINF:-1 tvg-name="Ziggo Sport 4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/ziggo.png" group-title="4K频道",Ziggo Sport 4K
@@ -127,6 +123,8 @@ http://muzzik-live.morescreens.com/mts-a6/playlist.m3u8
 https://d2dw21aq0j0l5c.cloudfront.net/playlist_3840x2160.m3u8
 #EXTINF:-1 tvg-name="BloombergTV" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/BloombergTV.png" group-title="4K频道", Bloomberg TV+ 4K
 https://bloomberg-bloombergtv-1-gb.samsung.wurl.com/manifest/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/482E2AAC-C5ED-4F1A-A212-D68171CDEE14.jpeg" group-title="4K频道",Sky Sport UHD
+http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/290744.ts
 #EXTINF:-1 tvg-name="CCTV-8K-组播AVS3源" tvg-logo="https://epg.112114.xyz/logo/CCTV8K.png" group-title="8K频道",CCTV-8K-测试源
 http://74.119.193.113:8280/live/cctv8k/hls.m3u8
 #EXTINF:-1 tvg-id="江苏8K测试" tvg-name="江苏8K测试" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/js8k.png" group-title="8K频道",江苏8K测试
