@@ -81,8 +81,8 @@ http://ultratv.one:2095/xMsGHAzQ/kYuckAK/31644
 http://theking365tv.ws:2103/play/live.php?mac=00:1A:79:5c:f4:67&stream=24083&extension=ts&play_token=70AEFyMfql
 #EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/482E2AAC-C5ED-4F1A-A212-D68171CDEE14.jpeg" group-title="4K频道",Sky Sport UHD
 http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/290744.ts
-#EXTINF:-1 tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/7B3FC511-989B-40A3-8F05-0AE950AD71DD.png" group-title="4K频道",TF1 4K
-http://pro.ipcover.tv:8080/baldefamily33300/baldefamily123497/152182
+#EXTINF:-1 tvg-name="Evenement UHD" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/evenement.png" group-title="4K频道",Evenement UHD
+http://abc123.digital:8080/R9YN4ecdXe/Zpe9M7mxtq/496756
 #EXTINF:-1 tvg-name="Ziggo Sport 4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/ziggo.png" group-title="4K频道",Ziggo Sport 4K
 http://live.iptvtotaal.com:8000/awpreneniptv/09HZaVeOmh/20560
 #EXTINF:-1 tvg-name="RTL UHD" tvg-logo="https://media.info/i/lf/600/1507473884/6934.png" group-title="4K频道",RTL UHD
