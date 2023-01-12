@@ -10,7 +10,7 @@ http://liveshowbak2.kan0512.com/ksz-norecord/csztv4k_4k.m3u8
 #EXTINF:-1 tvg-name="欢笑剧场4KHLG小果源" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/592C8D88-DA83-41ED-8824-E2E2E54E396C.png" group-title="4K频道",欢笑剧场4KHLG小果源
 http://159.75.85.63:5681/sxg.php?id=hxjc-4k_8000
 #EXTINF:-1,tvg-id="欢笑剧场" tvg-name="欢笑剧场" tvg-logo="https://epg.112114.xyz/logo/欢笑剧场.png" group-title="4K频道",欢笑剧场4k百视通源
-http://aliyun-upcloud-live.bestvcdn.com.cn/live/program/live/hxjc4k/15000000/mnf.m3u8
+http://tt-live.bestvcdn.com.cn/live/program/live/hxjc4k/15000000/mnf.m3u8
 #EXTINF:-1 tvg-name="欢笑剧场4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/592C8D88-DA83-41ED-8824-E2E2E54E396C.png" group-title="4K频道",欢笑剧场4K
 http://111.11.123.37:6610/000000001000/5000000007000010001/index.m3u8?channel-id=bestzb&Contentid=5000000007000010001&livemode=1&stbId=3
 #EXTINF:-1 tvg-name="纯享4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/cx4k.png" group-title="4K频道",纯享4K
@@ -20,11 +20,11 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225786/index.m3u8
 #EXTINF:-1 tvg-name="CCTV4K-25P-HLG源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4k.png" group-title="4K频道",CCTV4K-25P-HLG源
 http://159.75.85.63:5679/cctv4k.php
 #EXTINF:-1,tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://epg.112114.xyz/logo/CCTV4K.png" group-title="4K频道",CCTV-4K25P-SDR-百事通源
-http://aliyun-upcloud-live.bestvcdn.com.cn/live/program/live/cctv4k/15000000/mnf.m3u8
+http://tt-live.bestvcdn.com.cn/live/program/live/cctv4k/15000000/mnf.m3u8
 #EXTINF:-1 tvg-name="CCTV4K-50P-HLG小果源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4k.png" group-title="4K频道",CCTV4K-50P-HLG小果源
 http://159.75.85.63:5681/sxg.php?id=ys4Kcq_2000
 #EXTINF:-1,tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://epg.112114.xyz/logo/CCTV16.png" group-title="4K频道",CCTV16-4K25P-SDR-百视通源
-http://aliyun-upcloud-live.bestvcdn.com.cn/live/program/live/cctv16hd4k/15000000/mnf.m3u8
+http://tt-live.bestvcdn.com.cn/live/program/live/cctv16hd4k/15000000/mnf.m3u8
 #EXTINF:-1 tvg-name="CCTV16-4K-SDR源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K25P-SDR源
 http://111.11.123.31:6610/000000001000/5000000008000023254/index.m3u8?stbId=3&livemode=1&IASHttpSessionId=OTT2197120221119175523009763&channel-id=bestzb&Contentid=5000000008000023254
 #EXTINF:-1 tvg-name="CCTV16-4K-25PHLG源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K-25PHLG源
