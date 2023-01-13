@@ -1,10 +1,11 @@
 <?php
 date_default_timezone_set("Asia/Shanghai");
-$timefirst = date('YmdH', time());
 $channel = empty($_GET['id']) ? "cctv16hd4k/15000000" : trim($_GET['id']);
 $array = explode("/", $channel);
 $stream = "http://tt-live.bestvcdn.com.cn/live/program/live/{$array[0]}/{$array[1]}/";
 $timestamp = substr(time(), 0, 9) - 7;
+$timematch = $timestamp . '0';
+$timefirst = date('YmdH', $timematch);
 $current = "#EXTM3U" . "\r\n";
 $current .= "#EXT-X-VERSION:3" . "\r\n";
 $current .= "#EXT-X-TARGETDURATION:3" . "\r\n";
