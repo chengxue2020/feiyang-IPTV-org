@@ -22,7 +22,7 @@ http://159.75.85.63:5681/sxg.php?id=ys4Kcq_2000
 #EXTINF:-1 tvg-name="CCTV16-4K-SDR源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K25P-SDR源
 http://111.11.123.31:6610/000000001000/5000000008000023254/index.m3u8?stbId=3&livemode=1&IASHttpSessionId=OTT2197120221119175523009763&channel-id=bestzb&Contentid=5000000008000023254
 #EXTINF:-1 tvg-name="CCTV16-4K-25PHLG源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K-25PHLG源
-http://iptv.cooltv.top/tv/aishang.php?id=cctv164k
+https://live.v1.mk/aishang/cctv164k
 #EXTINF:-1 tvg-name="CCTV16-4K-50P-HLG小果源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV16.png" group-title="4K频道",CCTV16-4K-50P-HLG小果源
 http://159.75.85.63:5681/sxg.php?id=CCTV-16-4K_8000
 #EXTINF:-1 tvg-name="爱上4K" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/aishang4k.png" group-title="4K频道",爱上4K
