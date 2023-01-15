@@ -32,6 +32,7 @@ Now Sports UHD HK-3,http://clientsportals.com:2095/d4Je5xwD/yadTXB63/117957
 V Sports UHD,http://clientsportals.com:2095/d4Je5xwD/yadTXB63/114242
 V Sports UHD备,http://ultratv.one:2095/xMsGHAzQ/kYuckAK/31644
 BeIN Sports 4K,http://theking365tv.ws:2103/play/live.php?mac=00:1A:79:5c:f4:67&stream=24083&extension=ts&play_token=70AEFyMfql
+Eleven Sports 1 4K,http://4iptv.xyz:8080/IvanC10/5RVePcKFMFGG/154014
 Evenement UHD,http://abc123.digital:8080/R9YN4ecdXe/Zpe9M7mxtq/496756
 Ziggo Sport 4K,http://live.iptvtotaal.com:8000/awpreneniptv/09HZaVeOmh/20560
 RTL UHD,http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/29821.ts
