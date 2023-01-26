@@ -29,9 +29,13 @@ $mcontent = curl_exec($ch);
 curl_close($ch);
 preg_match('/Set-Cookie:(.*);/iU', $mcontent, $str);
 $realstr = $str[1];
-// echo $realstr;
+if (preg_match('/ttwid/i', $realstr) == 0) {
+    $cookiestr = 'ttwid=1%7CRKuAEJb6M1MAAIKnKDyTv0XEakzQHkad1TJzq54sLuI%7C1674752746%7C358c4bb081ffd2b7a93817ac39ae03dc4edbfc5b124f5f5e9fa10e9327b12e2a';
+} else {
+    $cookiestr = $realstr;
+}
 $newheader = array(
-    "Cookie:$realstr",
+    "Cookie:$cookiestr",
     'upgrade-insecure-requests: 1',
     'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
 );
