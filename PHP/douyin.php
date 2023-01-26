@@ -11,15 +11,14 @@ function mk_dir($newdir)
         return $dir;
     }
 }
-$firsturl = 'https://live.douyin.com';
-$apiurl = "https://live.douyin.com/webcast/web/enter/?aid=6383&web_rid=$liveid";
+$liveurl = "https://live.douyin.com/$liveid";
 $cookietext = './' . mk_dir('cookies/') . md5(microtime()) . '.' . 'txt';
 $headers = array(
     'upgrade-insecure-requests: 1',
     'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
 );
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $firsturl);
+curl_setopt($ch, CURLOPT_URL, $liveurl);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_HEADER, TRUE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -29,25 +28,29 @@ $mcontent = curl_exec($ch);
 curl_close($ch);
 preg_match('/Set-Cookie:(.*);/iU', $mcontent, $str);
 $realstr = $str[1];
-if (preg_match('/ttwid/i', $realstr) == 0) {
-    $cookiestr = 'ttwid=1%7CRKuAEJb6M1MAAIKnKDyTv0XEakzQHkad1TJzq54sLuI%7C1674752746%7C358c4bb081ffd2b7a93817ac39ae03dc4edbfc5b124f5f5e9fa10e9327b12e2a';
-} else {
-    $cookiestr = $realstr;
-}
 $newheader = array(
-    "Cookie:$cookiestr",
+    "cookie:$realstr",
     'upgrade-insecure-requests: 1',
     'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
 );
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $apiurl);
+curl_setopt($ch, CURLOPT_URL, $liveurl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $newheader);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
 $data = curl_exec($ch);
 curl_close($ch);
+$realdata = urldecode($data);
 unlink($cookietext);
-$dataArr = json_decode($data, true);
-$hls_url = $dataArr['data']['data'][0]['stream_url']['hls_pull_url_map']['FULL_HD1'];
+$reg = "/\"roomid\"\:\"[0-9]+\"/i";
+preg_match($reg, $realdata, $roomid);
+$nreg = "/[0-9]+/";
+preg_match($nreg, $roomid[0], $realid);
+$nnreg = "/\"id_str\":\"{$realid[0]}\"[\s\S]*?\"hls_pull_url\"/i";
+preg_match($nnreg,$realdata,$newcontent);
+$nnnreg = "/\"hls_pull_url_map\"[\s\S]*?}/i";
+preg_match($nnnreg,$newcontent[0],$finalstr);
+$mediaArr = json_decode('{' . $finalstr[0] . '}',true);
+$hls_url = $mediaArr['hls_pull_url_map']['FULL_HD1'];
 header('location:' . $hls_url);
