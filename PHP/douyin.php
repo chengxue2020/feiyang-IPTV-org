@@ -14,13 +14,13 @@ function mk_dir($newdir)
 $firsturl = 'https://live.douyin.com';
 $apiurl = "https://live.douyin.com/webcast/web/enter/?aid=6383&web_rid=$liveid";
 $cookietext = './' . mk_dir('cookies/') . md5(microtime() + $liveid) . '.' . 'txt';
-$header = array(
+$headers = array(
     'upgrade-insecure-requests: 1',
     'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
 );
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $firsturl);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_HEADER, TRUE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
