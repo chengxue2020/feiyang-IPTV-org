@@ -5,7 +5,8 @@
 http://你的IP:35455/douyin?url=https://v.douyin.com/xxxxxx&quality=xxxx
 ```
 其中&quality参数默认origin原画，可以手动指定：uhd、origin、hd、sd、ld
-### 2，抖音电脑端需要打开抖音网页版复制`live.douyin.com/xxxxxx`，只需要复制xxxxx即可
+### 2，抖音电脑端需要打开抖音网页版复制`live.douyin.com/xxxxxx`，只需要复制后面的xxxxx即可
 ```
 http://你的IP:35455/douyin/xxxxx
 ```
+## 更多平台后续会陆续添加
