@@ -9,11 +9,12 @@ package main
 
 import (
 	"Golang/liveurls"
+	"encoding/base64"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
-func setupRouter() *gin.Engine {
+func setupRouter(adurl string) *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
@@ -27,6 +28,8 @@ func setupRouter() *gin.Engine {
 		dyurl := douyinobj.GetRealurl()
 		if str, ok := dyurl.(string); ok {
 			dyliveurl = str
+		} else {
+			dyliveurl = adurl
 		}
 		c.Redirect(http.StatusMovedPermanently, dyliveurl)
 	})
@@ -42,6 +45,8 @@ func setupRouter() *gin.Engine {
 			dyurl := douyinobj.GetDouYinUrl()
 			if str, ok := dyurl.(string); ok {
 				dyliveurl = str
+			} else {
+				dyliveurl = adurl
 			}
 			c.Redirect(http.StatusMovedPermanently, dyliveurl)
 		}
@@ -50,6 +55,7 @@ func setupRouter() *gin.Engine {
 }
 
 func main() {
-	r := setupRouter()
+	defurl, _ := base64.StdEncoding.DecodeString("aHR0cDovLzE1OS43NS44NS42Mzo1NjgwL2QvYWQvcm9vbWFkL3BsYXlsaXN0Lm0zdTg=")
+	r := setupRouter(string(defurl))
 	r.Run(":35455")
 }

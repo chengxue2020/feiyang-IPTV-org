@@ -21,7 +21,7 @@ type Douyin struct {
 	Rid      string
 }
 
-func GetRoomId(url string) string {
+func GetRoomId(url string) any {
 	client := &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
@@ -30,18 +30,28 @@ func GetRoomId(url string) string {
 	r, _ := http.NewRequest("GET", url, nil)
 	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
 	r.Header.Add("authority", "v.douyin.com")
-	resp, _ := client.Do(r)
+	resp, err := client.Do(r)
+	if err != nil {
+		return err
+	}
 	defer resp.Body.Close()
 	reurl := resp.Header.Get("Location")
-	re := regexp.MustCompile(`\d{19}`)
-	res := re.FindAllStringSubmatch(reurl, -1)
+	reg := regexp.MustCompile(`\d{19}`)
+	res := reg.FindAllStringSubmatch(reurl, -1)
+	if res == nil {
+		return nil
+	}
 	return res[0][0]
 }
 
 func (d *Douyin) GetRealurl() any {
 	var mediamap map[string]map[string]map[string]map[string]map[string]any
-	shorturl := d.Shorturl
-	roomid := GetRoomId(shorturl)
+	var roomid string
+	if str, ok := GetRoomId(d.Shorturl).(string); ok {
+		roomid = str
+	} else {
+		return nil
+	}
 	client := &http.Client{}
 	params := map[string]string{
 		"aid":              "6383",
@@ -129,6 +139,9 @@ func (d *Douyin) GetDouYinUrl() any {
 	str, _ := url.QueryUnescape(string(body))
 	reg := regexp.MustCompile(`(?i)\"roomid\"\:\"[0-9]+\"`)
 	res := reg.FindAllStringSubmatch(str, -1)
+	if res == nil {
+		return nil
+	}
 	nreg := regexp.MustCompile(`[0-9]+`)
 	nres := nreg.FindAllStringSubmatch(res[0][0], -1)
 	nnreg := regexp.MustCompile(`(?i)\"id_str\":\"` + nres[0][0] + `(?i)\"[\s\S]*?\"hls_pull_url\"`)
