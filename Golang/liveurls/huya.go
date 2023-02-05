@@ -74,7 +74,7 @@ func (h *Huya) GetLiveUrl() any {
 	str := string(body)
 	freg := regexp.MustCompile(`"(?i)liveLineUrl":"([\s\S]*?)",`)
 	res := freg.FindStringSubmatch(str)
-	if res == nil {
+	if res == nil || res[1] == "" {
 		return nil
 	}
 	nstr, _ := base64.StdEncoding.DecodeString(res[1])
