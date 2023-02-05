@@ -12,7 +12,7 @@ http://你的IP:35455/douyin?url=https://v.douyin.com/xxxxxx(&quality=xxxx)
 http://你的IP:35455/douyin/xxxxx
 ```
 ## **斗鱼：**
-### 1，可选m3u8和flv两种流媒体传输方式（不加stream参数默认flv）：
+### 1，可选m3u8和flv两种流媒体传输方式（有时候明明开播却看不了可以尝试加后缀`?stream=hls`，不加stream参数默认flv）：
 ```
 http://你的IP:35455/douyu/xxxxx(?stream=hls)
 ```
