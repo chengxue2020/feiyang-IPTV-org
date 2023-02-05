@@ -105,8 +105,10 @@ func (d *Douyu) GetRealUrl() any {
 	json.Unmarshal(body1, &s1)
 	var hls_url string
 	for k, v := range s1 {
-		if s1[k] == float64(7) {
-			return nil
+		if k == "code" {
+			if s1[k] != float64(0) {
+				return nil
+			}
 		}
 		if v, ok := v.(map[string]any); ok {
 			for k, v := range v {
