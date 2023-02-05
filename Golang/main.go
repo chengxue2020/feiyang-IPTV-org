@@ -49,6 +49,19 @@ func setupRouter(adurl string) *gin.Engine {
 				dyliveurl = adurl
 			}
 			c.Redirect(http.StatusMovedPermanently, dyliveurl)
+		case "douyu":
+			var douyuurl string
+			douyuobj := &liveurls.Douyu{}
+			douyuobj.Rid = rid
+			douyuobj.Stream_type = c.DefaultQuery("stream", "flv")
+			douyuobj.Cdn_type = c.DefaultQuery("cdn", "akm-tct")
+			douyuliveurl := douyuobj.GetRealUrl()
+			if str, ok := douyuliveurl.(string); ok {
+				douyuurl = str
+			} else {
+				douyuurl = adurl
+			}
+			c.Redirect(http.StatusMovedPermanently, douyuurl)
 		}
 	})
 	return r
