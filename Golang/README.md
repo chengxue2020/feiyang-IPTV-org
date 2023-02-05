@@ -24,4 +24,8 @@ http://你的IP:35455/douyu/xxxxx(?stream=hls)
 ```
 http://你的IP:35455/douyu/xxxxx(?cdn=ws-tct)
 ```
-## bilibili，虎牙等更多平台后续会陆续添加
+## **虎牙：**
+```
+http://你的IP:35455/huya/xxxxx
+```
+## 更多平台后续会酌情添加
