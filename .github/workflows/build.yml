@@ -17,6 +17,7 @@ jobs:
           cd ./Golang
           GOOS=windows GOARCH=amd64 go build -o allinone_windows_amd64.exe
           GOOS=darwin GOARCH=amd64 go build -o allinone_darwin_amd64
+          GOOS=darwin GOARCH=arm64 go build -o allinone_darwin_arm64
           GOOS=linux GOARCH=arm64 go build -o allinone_linux_arm64
           GOOS=linux GOARCH=amd64 go build -o allinone_linux_amd64
 
@@ -26,6 +27,7 @@ jobs:
           files: |
             allinone_windows_amd64.exe
             allinone_darwin_amd64
+            allinone_darwin_arm64
             allinone_linux_arm64
             allinone_linux_amd64
           name: allinone_cross_compile
