@@ -65,5 +65,5 @@ func (b *BiliBili) GetPlayUrl() any {
 	}
 	roomId := json.Get([]byte(resp.Text()), "data", "room_id").ToString()
 
-	return u(roomId, "h5", coo)
+	return u(roomId, "web", coo)
 }
