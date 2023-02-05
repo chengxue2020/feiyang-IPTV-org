@@ -53,7 +53,7 @@ func setupRouter(adurl string) *gin.Engine {
 			var douyuurl string
 			douyuobj := &liveurls.Douyu{}
 			douyuobj.Rid = rid
-			douyuobj.Stream_type = c.DefaultQuery("stream", "flv")
+			douyuobj.Stream_type = c.DefaultQuery("stream", "hls")
 			douyuobj.Cdn_type = c.DefaultQuery("cdn", "akm-tct")
 			douyuliveurl := douyuobj.GetRealUrl()
 			if str, ok := douyuliveurl.(string); ok {
