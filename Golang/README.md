@@ -15,7 +15,7 @@ http://你的IP:35455/douyin?url=https://v.douyin.com/xxxxxx(&quality=xxxx)
 http://你的IP:35455/douyin/xxxxx
 ```
 ## **斗鱼：**
-### 1，可选m3u8和flv两种流媒体传输方式【`(www.douyu.com/)xxxxxx> 或 (www.douyu.com/xx/xx?rid=)xxxxxx，默认m3u8兼容性好】：
+### 1，可选m3u8和flv两种流媒体传输方式【`(www.douyu.com/)xxxxxx> 或 (www.douyu.com/xx/xx?rid=)xxxxxx`，默认m3u8兼容性好】：
 ```
 http://你的IP:35455/douyu/xxxxx
 ```
