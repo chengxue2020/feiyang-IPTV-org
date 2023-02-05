@@ -5,7 +5,7 @@
 // @Author:feiyang
 // @Contact:TG@feiyangdigital
 
-//B站源码来自项目：https://github.com/driveLiving/liveRedirect
+//B站源码来自项目：https://github.com/driveLiving/liveRedirect 加以修正
 
 package liveurls
 
