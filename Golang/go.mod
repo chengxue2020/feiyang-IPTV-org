@@ -3,10 +3,8 @@ module Golang
 go 1.19
 
 require (
-	github.com/asmcos/requests v0.0.0-20210319030608-c839e8ae4946
 	github.com/dop251/goja v0.0.0-20230203172422-5460598cfa32
 	github.com/gin-gonic/gin v1.8.2
-	github.com/json-iterator/go v1.1.12
 )
 
 require (
@@ -17,6 +15,7 @@ require (
 	github.com/go-playground/validator/v10 v10.11.1 // indirect
 	github.com/go-sourcemap/sourcemap v2.1.3+incompatible // indirect
 	github.com/goccy/go-json v0.9.11 // indirect
+	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect

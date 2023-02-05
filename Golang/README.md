@@ -29,6 +29,6 @@ http://你的IP:35455/huya/xxxxx
 ```
 ## **BiliBili`(live.bilibili.com/)xxxxxx`：**
 ```
-http://你的IP:35455/bilibili/xxxxx
+待重写中
 ```
 ## 更多平台后续会酌情添加
