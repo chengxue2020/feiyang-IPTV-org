@@ -10,12 +10,12 @@ chmod 777 allinone && ./allinone
 http://你的IP:35455/douyin?url=https://v.douyin.com/xxxxxx(&quality=xxxx)
 ```
 其中&quality参数默认origin原画，可以省略，也可以手动指定：uhd、origin、hd、sd、ld
-### 2，抖音电脑端需要打开抖音网页版复制`(live.douyin.com/)xxxxxx`，只需要复制后面的xxxxx即可
+### 2，抖音电脑端需要打开抖音网页版复制`(live.douyin.com/)xxxxxx`，只需要复制后面的xxxxx即可：
 ```
 http://你的IP:35455/douyin/xxxxx
 ```
 ## **斗鱼：**
-### 1，可选m3u8和flv两种流媒体传输方式（默认m3u8兼容性好）：
+### 1，可选m3u8和flv两种流媒体传输方式【`(www.douyu.com/)xxxxxx> 或 (www.douyu.com/xx/xx?rid=)xxxxxx，默认m3u8兼容性好】：
 ```
 http://你的IP:35455/douyu/xxxxx
 ```
@@ -23,11 +23,11 @@ http://你的IP:35455/douyu/xxxxx
 ```
 http://你的IP:35455/douyu/xxxxx(?stream=flv&cdn=ws-tct)
 ```
-## **虎牙：**
+## **虎牙`(huya.com/)xxxxxx`：**
 ```
 http://你的IP:35455/huya/xxxxx
 ```
-## **BiliBili：**
+## **BiliBili`(live.bilibili.com/)xxxxxx`：**
 ```
 http://你的IP:35455/bilibili/xxxxx
 ```
