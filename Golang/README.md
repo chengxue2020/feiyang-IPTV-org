@@ -1,6 +1,5 @@
 # **使用说明：**  
-## 首先说一下为什么用Golang重写，主要还是考虑后期做公共API，Golang更加稳定，效率也高一些，个人用还是优选PHP，因为现成的东西太多了
-## 去action中下载对应平台二进制执行文件，然后解压并直接执行
+## 首先去action中下载对应平台二进制执行文件，然后解压并直接执行
 ```
 chmod 777 allinone && ./allinone
 ```
@@ -27,5 +26,9 @@ http://你的IP:35455/douyu/xxxxx(?cdn=ws-tct)
 ## **虎牙：**
 ```
 http://你的IP:35455/huya/xxxxx
+```
+## **BiliBili：**
+```
+http://你的IP:35455/bilibili/xxxxx
 ```
 ## 更多平台后续会酌情添加
