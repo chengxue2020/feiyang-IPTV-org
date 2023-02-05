@@ -11,7 +11,6 @@ import (
 	"crypto/md5"
 	"encoding/base64"
 	"fmt"
-	"html"
 	"io"
 	"net/http"
 	"net/url"
@@ -32,34 +31,34 @@ func md5huya(str string) string {
 	return md5str
 }
 
-func format(e string) string {
-	i := strings.Split(e, "?")[0]
-	b := strings.Split(e, "?")[1]
+func format(realstr string) string {
+	i := strings.Split(realstr, "?")[0]
+	b := strings.Split(realstr, "?")[1]
 	r := strings.Split(i, "/")
-	re := regexp.MustCompile(".(flv|m3u8)")
-	s := re.ReplaceAllString(r[len(r)-1], "")
-	srcAntiCode := html.UnescapeString(b)
-	c := strings.Split(srcAntiCode, "&")
-	cc := c[:0]
+	reg := regexp.MustCompile(".(flv|m3u8)")
+	s := reg.ReplaceAllString(r[len(r)-1], "")
+	c := strings.SplitN(b, "&", 4)
+	cnil := c[:0]
 	n := make(map[string]string)
-	for _, x := range c {
-		if len(x) > 0 {
-			cc = append(cc, x)
-			ss := strings.Split(x, "=")
-			n[ss[0]] = ss[1]
+	for _, v := range c {
+		if len(v) > 0 {
+			cnil = append(cnil, v)
+			narr := strings.Split(v, "=")
+			n[narr[0]] = narr[1]
 		}
 	}
-	c = cc
+	c = cnil
 	fm, _ := url.QueryUnescape(n["fm"])
-	uu, _ := base64.StdEncoding.DecodeString(fm)
-	u := string(uu)
+	ub64, _ := base64.StdEncoding.DecodeString(fm)
+	u := string(ub64)
 	p := strings.Split(u, "_")[0]
 	f := strconv.FormatInt(time.Now().UnixNano()/100, 10)
 	l := n["wsTime"]
 	t := "0"
 	h := p + "_" + t + "_" + s + "_" + f + "_" + l
 	m := md5huya(h)
-	url := fmt.Sprintf("%s?wsSecret=%s&wsTime=%s&u=%s&seqid=%s&txyp=%s&fs=%s&sphdcdn=%s&sphdDC=%s&sphd=%s&u=0&t=100&sv=", i, m, l, t, f, n["txyp"], n["fs"], n["sphdcdn"], n["sphdDC"], n["sphd"])
+	y := c[len(c)-1]
+	url := fmt.Sprintf("%s?wsSecret=%s&wsTime=%s&u=%s&seqid=%s&%s", i, m, l, t, f, y)
 	return url
 }
 
@@ -84,8 +83,7 @@ func (h *Huya) GetLiveUrl() any {
 		return "https:" + realstr
 	} else {
 		liveurl := format(realstr)
-		liveurl = strings.Replace(liveurl, "hls", "flv", -1)
-		liveurl = strings.Replace(liveurl, "m3u8", "flv", -1)
-		return "https:" + liveurl
+		realurl := strings.Replace(strings.Replace(strings.Replace(liveurl, "hls", "flv", -1), "m3u8", "flv", -1), "&ctype=tars_mobile", "", -1)
+		return "https:" + realurl
 	}
 }
