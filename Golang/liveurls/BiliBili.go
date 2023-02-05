@@ -5,6 +5,8 @@
 // @Author:feiyang
 // @Contact:TG@feiyangdigital
 
+//B站源码参考自项目：https://github.com/driveLiving/liveRedirect
+
 package liveurls
 
 import (
