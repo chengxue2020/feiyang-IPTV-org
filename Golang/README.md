@@ -14,10 +14,10 @@ http://你的IP:35455/douyin/xxxxx
 ## **斗鱼：**
 ### 1，可选m3u8和flv两种流媒体传输方式（不加stream参数默认flv）：
 ```
-http://你的IP:35455/douyin/xxxxx(?stream=hls)
+http://你的IP:35455/douyu/xxxxx(?stream=hls)
 ```
 ### 2，选择flv时可选择不同cdn（不加cdn参数默认`akm-tct.douyucdn.cn`）
 ```
-http://你的IP:35455/douyin/xxxxx(?cdn=ws-tct)
+http://你的IP:35455/douyu/xxxxx(?cdn=ws-tct)
 ```
 ## bilibili，虎牙等更多平台后续会陆续添加
