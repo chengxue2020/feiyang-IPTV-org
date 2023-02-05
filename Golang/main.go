@@ -62,6 +62,17 @@ func setupRouter(adurl string) *gin.Engine {
 				douyuurl = adurl
 			}
 			c.Redirect(http.StatusMovedPermanently, douyuurl)
+		case "huya":
+			var huyaurl string
+			huyaobj := &liveurls.Huya{}
+			huyaobj.Rid = rid
+			hyurl := huyaobj.GetLiveUrl()
+			if str, ok := hyurl.(string); ok {
+				huyaurl = str
+			} else {
+				huyaurl = adurl
+			}
+			c.Redirect(http.StatusMovedPermanently, huyaurl)
 		}
 	})
 	return r
