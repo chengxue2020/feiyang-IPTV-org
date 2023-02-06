@@ -34,8 +34,7 @@ func setupRouter(adurl string) *gin.Engine {
 		douyinobj := &liveurls.Douyin{}
 		douyinobj.Shorturl = url
 		douyinobj.Quality = quality
-		dyliveurl := duanyan(adurl, douyinobj.GetRealurl())
-		c.Redirect(http.StatusMovedPermanently, dyliveurl)
+		c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyinobj.GetRealurl()))
 	})
 
 	r.GET("/:path/:rid", func(c *gin.Context) {
@@ -45,20 +44,17 @@ func setupRouter(adurl string) *gin.Engine {
 		case "douyin":
 			douyinobj := &liveurls.Douyin{}
 			douyinobj.Rid = rid
-			dyliveurl := duanyan(adurl, douyinobj.GetDouYinUrl())
-			c.Redirect(http.StatusMovedPermanently, dyliveurl)
+			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyinobj.GetDouYinUrl()))
 		case "douyu":
 			douyuobj := &liveurls.Douyu{}
 			douyuobj.Rid = rid
 			douyuobj.Stream_type = c.DefaultQuery("stream", "hls")
 			douyuobj.Cdn_type = c.DefaultQuery("cdn", "akm-tct")
-			douyuurl := duanyan(adurl, douyuobj.GetRealUrl())
-			c.Redirect(http.StatusMovedPermanently, douyuurl)
+			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyuobj.GetRealUrl()))
 		case "huya":
 			huyaobj := &liveurls.Huya{}
 			huyaobj.Rid = rid
-			huyaurl := duanyan(adurl, huyaobj.GetLiveUrl())
-			c.Redirect(http.StatusMovedPermanently, huyaurl)
+			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, huyaobj.GetLiveUrl()))
 		case "bilibili":
 			c.String(http.StatusOK, "待重写中")
 		}
