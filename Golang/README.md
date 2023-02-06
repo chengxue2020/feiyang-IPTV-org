@@ -4,7 +4,7 @@
 ```
 docker run -d --restart unless-stopped --privileged=true -p 35455:35455 --name allinone youshandefeiyang/allinone
 ```
-### 2，配置watchtower每天凌晨两点自动监听allinone镜像更新，同步GitHub仓库：
+### 2，一键配置watchtower每天凌晨两点自动监听allinone镜像更新，同步GitHub仓库：
 ```
 docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock  containrrr/watchtower -c  --schedule "0 0 2 * * *"
 ```
