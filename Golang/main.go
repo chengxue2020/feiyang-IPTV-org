@@ -14,6 +14,16 @@ import (
 	"net/http"
 )
 
+func duanyan(adurl string, realurl any) string {
+	var liveurl string
+	if str, ok := realurl.(string); ok {
+		liveurl = str
+	} else {
+		liveurl = adurl
+	}
+	return liveurl
+}
+
 func setupRouter(adurl string) *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
@@ -21,16 +31,10 @@ func setupRouter(adurl string) *gin.Engine {
 	r.GET("/douyin", func(c *gin.Context) {
 		url := c.Query("url")
 		quality := c.DefaultQuery("quality", "origin")
-		var dyliveurl string
 		douyinobj := &liveurls.Douyin{}
 		douyinobj.Shorturl = url
 		douyinobj.Quality = quality
-		dyurl := douyinobj.GetRealurl()
-		if str, ok := dyurl.(string); ok {
-			dyliveurl = str
-		} else {
-			dyliveurl = adurl
-		}
+		dyliveurl := duanyan(adurl, douyinobj.GetRealurl())
 		c.Redirect(http.StatusMovedPermanently, dyliveurl)
 	})
 
@@ -39,51 +43,23 @@ func setupRouter(adurl string) *gin.Engine {
 		rid := c.Param("rid")
 		switch path {
 		case "douyin":
-			var dyliveurl string
 			douyinobj := &liveurls.Douyin{}
 			douyinobj.Rid = rid
-			dyurl := douyinobj.GetDouYinUrl()
-			if str, ok := dyurl.(string); ok {
-				dyliveurl = str
-			} else {
-				dyliveurl = adurl
-			}
+			dyliveurl := duanyan(adurl, douyinobj.GetDouYinUrl())
 			c.Redirect(http.StatusMovedPermanently, dyliveurl)
 		case "douyu":
-			var douyuurl string
 			douyuobj := &liveurls.Douyu{}
 			douyuobj.Rid = rid
 			douyuobj.Stream_type = c.DefaultQuery("stream", "hls")
 			douyuobj.Cdn_type = c.DefaultQuery("cdn", "akm-tct")
-			douyuliveurl := douyuobj.GetRealUrl()
-			if str, ok := douyuliveurl.(string); ok {
-				douyuurl = str
-			} else {
-				douyuurl = adurl
-			}
+			douyuurl := duanyan(adurl, douyuobj.GetRealUrl())
 			c.Redirect(http.StatusMovedPermanently, douyuurl)
 		case "huya":
-			var huyaurl string
 			huyaobj := &liveurls.Huya{}
 			huyaobj.Rid = rid
-			hyurl := huyaobj.GetLiveUrl()
-			if str, ok := hyurl.(string); ok {
-				huyaurl = str
-			} else {
-				huyaurl = adurl
-			}
+			huyaurl := duanyan(adurl, huyaobj.GetLiveUrl())
 			c.Redirect(http.StatusMovedPermanently, huyaurl)
 		case "bilibili":
-			//var biliurl string
-			//biliobj := &liveurls.BiliBili{}
-			//biliobj.Rid = rid
-			//biurl := biliobj.GetPlayUrl()
-			//if str, ok := biurl.(string); ok {
-			//	biliurl = str
-			//} else {
-			//	biliurl = adurl
-			//}
-			//c.Redirect(http.StatusMovedPermanently, biliurl)
 			c.String(http.StatusOK, "待重写中")
 		}
 	})
