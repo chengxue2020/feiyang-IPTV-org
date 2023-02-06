@@ -13,7 +13,8 @@ docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock
 ```
 chmod 777 allinone && ./allinone
 ```
-建议搭配进程守护工具进行使用，windows直接双击运行，如果你可以帮我PR多平台Dockerfile，我将感激不尽！  
+建议搭配进程守护工具进行使用，windows直接双击运行！
+## 三、详细使用方法
 ## **抖音：**
 ### 1，抖音手机客户端进入直播间后，点击右下角三个点，点击分享，点击复制链接，然后运行并访问：
 ```
