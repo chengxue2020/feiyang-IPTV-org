@@ -148,6 +148,9 @@ func (d *Douyin) GetDouYinUrl() any {
 	nnres := nnreg.FindAllStringSubmatch(str, -1)
 	nnnreg := regexp.MustCompile(`(?i)\"hls_pull_url_map\"[\s\S]*?}`)
 	nnnres := nnnreg.FindAllStringSubmatch(nnres[0][0], -1)
+	if nnnres == nil {
+		return nil
+	}
 	json.Unmarshal([]byte(`{`+nnnres[0][0]+`}`), &mediamap)
 	return mediamap["hls_pull_url_map"]["FULL_HD1"]
 }
