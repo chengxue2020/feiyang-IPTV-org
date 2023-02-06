@@ -73,6 +73,18 @@ func setupRouter(adurl string) *gin.Engine {
 				huyaurl = adurl
 			}
 			c.Redirect(http.StatusMovedPermanently, huyaurl)
+		case "bilibili":
+			//var biliurl string
+			//biliobj := &liveurls.BiliBili{}
+			//biliobj.Rid = rid
+			//biurl := biliobj.GetPlayUrl()
+			//if str, ok := biurl.(string); ok {
+			//	biliurl = str
+			//} else {
+			//	biliurl = adurl
+			//}
+			//c.Redirect(http.StatusMovedPermanently, biliurl)
+			c.String(http.StatusOK, "待重写中")
 		}
 	})
 	return r
