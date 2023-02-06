@@ -1,5 +1,15 @@
 # **使用说明：**  
-## 首先去action中下载对应平台二进制执行文件，然后解压并直接执行
+## 一、推荐使用Docker一键运行，并配置watchtower监听Docker镜像更新，直接一劳永逸：
+### 1，使用Docker一键配置allinone
+```
+docker run -d --restart unless-stopped --privileged=true -p 35455:35455 --name allinone youshandefeiyang/allinone
+```
+### 2，配置watchtower每天凌晨两点自动监听allinone镜像更新，同步GitHub仓库：
+```
+docker run -d --name watchtower --restart unless-stopped -v /var/run/docker.sock:/var/run/docker.sock  containrrr/watchtower -c  --schedule "0 0 2 * * *"
+```
+## 二、直接运行：
+首先去action中下载对应平台二进制执行文件，然后解压并直接执行
 ```
 chmod 777 allinone && ./allinone
 ```
