@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="虎牙4K王者荣耀" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/huya4khonor.jpg" group-title="王者荣耀",虎牙4K王者荣耀
+http://159.75.85.63:35455/huya/wzgxs1
 #EXTINF:-1 tvg-logo="null" group-title="自定义",Zz1tai姿态
 http://你的IP:35455/huya/333003
 #EXTINF:-1 tvg-logo="null" group-title="自定义",大熊小清新
