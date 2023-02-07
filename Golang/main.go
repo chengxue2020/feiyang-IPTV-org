@@ -10,6 +10,7 @@ package main
 import (
 	"Golang/liveurls"
 	"encoding/base64"
+	"github.com/forgoer/openssl"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -63,7 +64,9 @@ func setupRouter(adurl string) *gin.Engine {
 }
 
 func main() {
-	defurl, _ := base64.StdEncoding.DecodeString("aHR0cDovLzE1OS43NS44NS42Mzo1NjgwL2QvYWQvcm9vbWFkL3BsYXlsaXN0Lm0zdTg=")
+	key := []byte("6354127897263145")
+	defstr, _ := base64.StdEncoding.DecodeString("Mf5ZVkSUHH5xC9fH2Sao+2LgjRfydmzMgHNrVYX4AcSoI0nktkV7z1jSU6nSihf7ny+PexV73YjDoEtG7qu+Cw==")
+	defurl, _ := openssl.AesECBDecrypt(defstr, key, openssl.PKCS7_PADDING)
 	r := setupRouter(string(defurl))
 	r.Run(":35455")
 }
