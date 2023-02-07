@@ -22,10 +22,8 @@ jobs:
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v3
         with:
-          files: |
-            allinone_linux_amd64
           name: allinone_linux_amd64
-          path: Golang/
+          path: Golang/allinone_linux_amd64
 
   linux_arm64_build:
     runs-on: ubuntu-latest
@@ -38,10 +36,8 @@ jobs:
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v3
         with:
-          files: |
-            allinone_linux_arm64
           name: allinone_linux_arm64
-          path: Golang/
+          path: Golang/allinone_linux_arm64
 
   darwin_amd64_build:
     runs-on: ubuntu-latest
@@ -50,14 +46,12 @@ jobs:
       - name: Cross Compile
         run: |
           cd ./Golang
-          GOOS=darwin GOARCH=amd64 go build -o allinone_darwin_amd64
+          GOOS=darwin GOARCH=amd64 go build -o allinone_darwin_amd64  
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v3
         with:
-          files: |
-            allinone_darwin_amd64
           name: allinone_darwin_amd64
-          path: Golang/    
+          path: Golang/allinone_darwin_amd64  
 
   darwin_arm64_build:
     runs-on: ubuntu-latest
@@ -70,10 +64,8 @@ jobs:
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v3
         with:
-          files: |
-            allinone_darwin_arm64
           name: allinone_darwin_arm64
-          path: Golang/ 
+          path: Golang/allinone_darwin_arm64
   
   windows_amd64_build:
     runs-on: ubuntu-latest
@@ -86,7 +78,5 @@ jobs:
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v3
         with:
-          files: |
-            allinone_windows_amd64.exe
           name: allinone_windows_amd64
-          path: Golang/
+          path: Golang/allinone_windows_amd64.exe
