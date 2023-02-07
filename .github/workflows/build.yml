@@ -46,7 +46,7 @@ jobs:
       - name: Cross Compile
         run: |
           cd ./Golang
-          GOOS=darwin GOARCH=amd64 go build -o allinone_darwin_amd64  
+          GOOS=darwin GOARCH=amd64 go build -o allinone_darwin_amd64
       - name: Upload Cross Compile Artifacts
         uses: actions/upload-artifact@v3
         with:
