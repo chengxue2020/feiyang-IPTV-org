@@ -35,7 +35,9 @@ http://159.75.85.63:5828/4kys.php
 http://159.75.85.63:5681/sxg.php
 #EXTINF:-1 tvg-name="虎牙4K王者荣耀" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/huya4khonor.jpg" group-title="4K频道",虎牙4K王者荣耀
 http://159.75.85.63:35455/huya/wzgxs1
-#EXTINF:-1 tvg-name="斗鱼4K电影" tvg-logo="http://epg.51zmt.top:8000/tb1/qt/IPTV%E7%BB%8F%E5%85%B8%E7%94%B5%E5%BD%B1.png" group-title="4K频道",斗鱼4K
+#EXTINF:-1 tvg-logo="https://apic.douyucdn.cn/upload/avanew/face/201612/19/22/ffc06ea36674503b942c5537874e8a4e_big.jpg" group-title="4K频道",斗鱼4K激战2
+http://159.75.85.63:35455/douyu/3916618
+#EXTINF:-1 tvg-name="斗鱼4K电影" tvg-logo="https://apic.douyucdn.cn/upload/avatar_v3/202011/9deb93fa33fb4d9eb2a9bc30a465404c_big.jpg" group-title="4K频道",斗鱼4K电影
 http://159.75.85.63:35455/douyu/9249162
 #EXTINF:-1 tvg-name="咪咕体育-4K-HLG源" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/mg4k.png" group-title="4K频道",咪咕体育-4K-HLG源
 http://117.136.156.66:80/000000001000/3000000010000005180/index.m3u8
