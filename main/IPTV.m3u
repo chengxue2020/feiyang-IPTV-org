@@ -129,27 +129,27 @@ http://live.darkside-iptv.co:8080/pMDWkZ3Uff7S/g98astfctveh/290744.ts
 http://74.119.193.113:8280/live/cctv8k/hls.m3u8
 #EXTINF:-1 tvg-id="江苏8K测试" tvg-name="江苏8K测试" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/js8k.png" group-title="8K频道",江苏8K测试
 http://ott.mobaibox.com/PLTV/3/224/3221228132/index.m3u8
-#EXTINF:-1 group-title="4K无台标",YOSSO TV 4K
+#EXTINF:-1 group-title="4K频道",YOSSO TV 4K
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/16153/index.m3u8
-#EXTINF:-1 group-title="4K无台标",минимакс-flip UHD
+#EXTINF:-1 group-title="4K频道",минимакс-flip UHD
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/13057/index.m3u8
-#EXTINF:-1 group-title="4K无台标",SKY HIGH VHS UHD
+#EXTINF:-1 group-title="4K频道",SKY HIGH VHS UHD
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/17058/index.m3u8
-#EXTINF:-1 group-title="4K无台标",SKY HIGH UHD HDR
+#EXTINF:-1 group-title="4K频道",SKY HIGH UHD HDR
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/17059/index.m3u8
-#EXTINF:-1 group-title="4K无台标",SKY HIGH DANCE UHD
+#EXTINF:-1 group-title="4K频道",SKY HIGH DANCE UHD
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/14250/index.m3u8
-#EXTINF:-1 group-title="4K无台标",SKY HIGH DOC UHD
+#EXTINF:-1 group-title="4K频道",SKY HIGH DOC UHD
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/17053/index.m3u8
-#EXTINF:-1 group-title="4K无台标",SKY HIGH NATURE 4K HDR
+#EXTINF:-1 group-title="4K频道",SKY HIGH NATURE 4K HDR
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/14248/index.m3u8
-#EXTINF:-1 group-title="4K无台标",Liberty KINOENG  UHD
+#EXTINF:-1 group-title="4K频道",Liberty KINOENG  UHD
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/17060/index.m3u8
-#EXTINF:-1 group-title="4K无台标",Liberty MARVEL 4K
+#EXTINF:-1 group-title="4K频道",Liberty MARVEL 4K
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/15090/index.m3u8
-#EXTINF:-1 group-title="4K无台标",Liberty Кино Микс 4K
+#EXTINF:-1 group-title="4K频道",Liberty Кино Микс 4K
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/15110/index.m3u8
-#EXTINF:-1 group-title="4K无台标",Liberty Мульт 4K
+#EXTINF:-1 group-title="4K频道",Liberty Мульт 4K
 http://3efb37ea.ucomist.net/iptv/2ZDKWT2XKGZEEA/18051/index.m3u8
 #EXTINF:-1 tvg-id="江苏8K测试" tvg-name="江苏8K测试" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/js8k.png" group-title="4K/8K-IPV6",江苏8K测试
 http://[2409:8087:2001:20:2800:0:df6e:eb04]/wh7f454c46tw1782571424_-1576923679/ott.mobaibox.com/PLTV/3/224/3221228132/index.m3u8?icpid=3&RTS=1674188624&from=40&popid=40&hms_devid=2041&prioritypopid=40&vqe=3
