@@ -43,11 +43,14 @@ func (d *Douyu) GetRealUrl() any {
 	resp, _ := client.Do(r)
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
-	reg := regexp.MustCompile(`(?i)(function ub98484234.*)\s(var.*)`)
-	res := reg.FindStringSubmatch(string(body))
-	if res == nil {
+	roomidreg := regexp.MustCompile(`rid":(\d{1,7}),"vipId`)
+	roomidres := roomidreg.FindStringSubmatch(string(body))
+	if roomidres == nil {
 		return nil
 	}
+	realroomid := roomidres[1]
+	reg := regexp.MustCompile(`(?i)(function ub98484234.*)\s(var.*)`)
+	res := reg.FindStringSubmatch(string(body))
 	nreg := regexp.MustCompile(`(?i)eval.*;}`)
 	strfn := nreg.ReplaceAllString(res[0], "strc;}")
 	vm := js.New()
@@ -69,7 +72,7 @@ func (d *Douyu) GetRealUrl() any {
 	nres := fmt.Sprintf("%s", result)
 	nnreg := regexp.MustCompile(`(?i)v=(\d+)`)
 	nnres := nnreg.FindStringSubmatch(nres)
-	unrb := fmt.Sprintf("%v%v%v%v", d.Rid, did, timestamp, nnres[1])
+	unrb := fmt.Sprintf("%v%v%v%v", realroomid, did, timestamp, nnres[1])
 	rb := md5V3(unrb)
 	nnnreg := regexp.MustCompile(`(?i)return rt;}\);?`)
 	strfn2 := nnnreg.ReplaceAllString(nres, "return rt;}")
@@ -86,7 +89,7 @@ func (d *Douyu) GetRealUrl() any {
 	}
 	result2, n3err := jsfn2(
 		js.Undefined(),
-		vm2.ToValue(d.Rid),
+		vm2.ToValue(realroomid),
 		vm2.ToValue(did),
 		vm2.ToValue(timestamp),
 	)
@@ -94,7 +97,7 @@ func (d *Douyu) GetRealUrl() any {
 		panic(n3err)
 	}
 	param := fmt.Sprintf("%s", result2)
-	realparam := param + "&ver=219032101&rid=" + d.Rid + "&rate=0"
+	realparam := param + "&ver=219032101&rid=" + realroomid + "&rate=0"
 	r1, n4err := http.Post("https://m.douyu.com/api/room/ratestream", "application/x-www-form-urlencoded", strings.NewReader(realparam))
 	if n4err != nil {
 		panic(n4err)
