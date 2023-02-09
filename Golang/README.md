@@ -34,12 +34,34 @@ http://你的IP:35455/douyu/xxxxx
 ```
 http://你的IP:35455/douyu/xxxxx(?stream=flv&cdn=ws-tct)
 ```
+## **BiliBili`(live.bilibili.com/)xxxxxx`：**
+### 1，平台platform参数选择（默认web，如果有问题，可以切换h5平台）：
+```
+"web"   => "桌面端"
+"h5"    => "h5端"
+```
+### 2，线路line参数选择（默认线路二，如果卡顿/看不了，请切换线路一或者三，一般直播间只会提供两条线路，所以建议线路一/二之间切换）：
+```
+"first" => "线路一"
+"second" => "线路二"
+"third" => "线路三"
+```
+### 3，画质quality参数选择（默认原画，可以看什么画质去直播间看看，能选什么画质就能加什么参数，参数错误一点不能播放）：
+```
+"30000" => "杜比"
+"20000" => "4K"
+"10000" => "原画"
+"400"   => "蓝光"
+"250"   => "超清"
+"150"   => "高清"
+"80"    => "流畅"
+```
+### 4，最后的代理链接示例：
+```
+http://你的IP:35455/bilibili/xxxxxx(?platform=h5&line=first&quality=10000)
+```
 ## **虎牙`(huya.com/)xxxxxx`：**
 ```
 http://你的IP:35455/huya/xxxxx
-```
-## **BiliBili`(live.bilibili.com/)xxxxxx`：**
-```
-待重写中
 ```
 ## 更多平台后续会酌情添加
