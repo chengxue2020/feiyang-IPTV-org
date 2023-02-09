@@ -57,7 +57,12 @@ func setupRouter(adurl string) *gin.Engine {
 			huyaobj.Rid = rid
 			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, huyaobj.GetLiveUrl()))
 		case "bilibili":
-			c.String(http.StatusOK, "即将发布")
+			biliobj := &liveurls.BiliBili{}
+			biliobj.Rid = rid
+			biliobj.Platform = c.DefaultQuery("platform", "web")
+			biliobj.Quality = c.DefaultQuery("quality", "10000")
+			biliobj.Line = c.DefaultQuery("line", "second")
+			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, biliobj.GetPlayUrl()))
 		}
 	})
 	return r
