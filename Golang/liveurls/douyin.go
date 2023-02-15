@@ -126,10 +126,17 @@ func (d *Douyin) GetRealurl() any {
 
 func (d *Douyin) GetDouYinUrl() any {
 	liveurl := "https://live.douyin.com/" + d.Rid
-	var mediamap map[string]map[string]any
 	client := &http.Client{}
+	var mediamap map[string]map[string]any
+	re, _ := http.NewRequest("GET", liveurl, nil)
+	re.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
+	re.Header.Add("upgrade-insecure-requests", "1")
+	oresp, _ := client.Do(re)
+	defer oresp.Body.Close()
+	oreg := regexp.MustCompile(`(?i)__ac_nonce=(.*?);`)
+	ores := oreg.FindStringSubmatch(oresp.Header["Set-Cookie"][0])
 	r, _ := http.NewRequest("GET", liveurl, nil)
-	cookie1 := &http.Cookie{Name: "__ac_nonce", Value: "063dbe6790002253db174"}
+	cookie1 := &http.Cookie{Name: "__ac_nonce", Value: ores[1]}
 	r.AddCookie(cookie1)
 	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
 	r.Header.Add("upgrade-insecure-requests", "1")
@@ -137,14 +144,12 @@ func (d *Douyin) GetDouYinUrl() any {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	str, _ := url.QueryUnescape(string(body))
-	reg := regexp.MustCompile(`(?i)\"roomid\"\:\"[0-9]+\"`)
+	reg := regexp.MustCompile(`(?i)\"roomid\"\:\"([0-9]+)\"`)
 	res := reg.FindAllStringSubmatch(str, -1)
 	if res == nil {
 		return nil
 	}
-	nreg := regexp.MustCompile(`[0-9]+`)
-	nres := nreg.FindAllStringSubmatch(res[0][0], -1)
-	nnreg := regexp.MustCompile(`(?i)\"id_str\":\"` + nres[0][0] + `(?i)\"[\s\S]*?\"hls_pull_url\"`)
+	nnreg := regexp.MustCompile(`(?i)\"id_str\":\"` + res[0][1] + `(?i)\"[\s\S]*?\"hls_pull_url\"`)
 	nnres := nnreg.FindAllStringSubmatch(str, -1)
 	nnnreg := regexp.MustCompile(`(?i)\"hls_pull_url_map\"[\s\S]*?}`)
 	nnnres := nnnreg.FindAllStringSubmatch(nnres[0][0], -1)
