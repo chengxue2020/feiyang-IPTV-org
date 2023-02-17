@@ -64,4 +64,9 @@ http://你的IP:35455/bilibili/xxxxxx(?platform=h5&line=first&quality=10000)
 ```
 http://你的IP:35455/huya/xxxxx
 ```
+## **YouTube:**
+```
+https://www.youtube.com/watch?v=cK4LemjoFd0
+Rid: cK4LemjoFd0
+```
 ## 更多平台后续会酌情添加
