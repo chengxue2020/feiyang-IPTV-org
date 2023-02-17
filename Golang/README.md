@@ -68,6 +68,6 @@ http://你的IP:35455/huya/xxxxx
 ```
 https://www.youtube.com/watch?v=cK4LemjoFd0
 Rid: cK4LemjoFd0
-http://你的IP:35455/youtube/cK4LemjoFd0
+http://你的IP:35455/youtube/cK4LemjoFd0(?quality=1080/720...)
 ```
 ## 更多平台后续会酌情添加
