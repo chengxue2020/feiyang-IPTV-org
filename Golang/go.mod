@@ -3,6 +3,7 @@ module Golang
 go 1.19
 
 require (
+	github.com/dlclark/regexp2 v1.7.0
 	github.com/dop251/goja v0.0.0-20230203172422-5460598cfa32
 	github.com/forgoer/openssl v1.5.0
 	github.com/gin-gonic/gin v1.8.2
@@ -10,7 +11,7 @@ require (
 )
 
 require (
-	github.com/dlclark/regexp2 v1.7.0 // indirect
+	github.com/etherlabsio/go-m3u8 v1.0.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect

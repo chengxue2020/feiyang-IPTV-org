@@ -1,3 +1,4 @@
+github.com/AlekSi/pointer v1.0.0/go.mod h1:1kjywbfcPFCmncIxtk6fIEub6LKrfMz3gc5QKVOSOA8=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
@@ -10,6 +11,8 @@ github.com/dop251/goja v0.0.0-20230203172422-5460598cfa32 h1:audXtK7nV3y4W9ckAxR
 github.com/dop251/goja v0.0.0-20230203172422-5460598cfa32/go.mod h1:yRkwfj0CBpOGre+TwBsqPV0IH0Pk73e4PXJOeNDboGs=
 github.com/dop251/goja_nodejs v0.0.0-20210225215109-d91c329300e7/go.mod h1:hn7BA7c8pLvoGndExHudxTDKZ84Pyvv+90pbBjbTz0Y=
 github.com/dop251/goja_nodejs v0.0.0-20211022123610-8dd9abb0616d/go.mod h1:DngW8aVqWbuLRMHItjPUyqdj+HWPvnQe8V8y1nDpIbM=
+github.com/etherlabsio/go-m3u8 v1.0.0 h1:d3HJVr8wlbvJO20ksKEyvDYf4bcM7v8YV3W83fHswL0=
+github.com/etherlabsio/go-m3u8 v1.0.0/go.mod h1:RzDiaXgaYnIEzZUmVUD/xMRFR7bY7U5JaCnp8XYLmXU=
 github.com/forgoer/openssl v1.5.0 h1:zu1AvfECl6VatFfkfryvI/C8Cru+xLEvZ6Q80DmAPRc=
 github.com/forgoer/openssl v1.5.0/go.mod h1:NMVFOzYeLVR7UiGTxsa+A21nrERTZ3Rv2JHDPcJpDyI=
 github.com/gin-contrib/sse v0.1.0 h1:Y/yl/+YNO8GZSjAhjMsSuLt29uWRFHdHYUb5lYOV9qE=
