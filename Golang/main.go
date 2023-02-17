@@ -66,6 +66,7 @@ func setupRouter(adurl string) *gin.Engine {
 		case "youtube":
 			ytbObj := &liveurls.Youtube{}
 			ytbObj.Rid = rid
+			ytbObj.Quality = c.DefaultQuery("quality", "1080")
 			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, ytbObj.GetLiveUrl()))
 		}
 	})
