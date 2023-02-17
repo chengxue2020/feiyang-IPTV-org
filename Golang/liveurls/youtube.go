@@ -12,11 +12,14 @@ import (
 	"io"
 	"net/http"
 	"strconv"
+	"sync"
 	"time"
 
 	"github.com/dlclark/regexp2"
 	"github.com/etherlabsio/go-m3u8/m3u8"
 )
+
+var streamCachedMap sync.Map
 
 type Youtube struct {
 	//https://www.youtube.com/watch?v=cK4LemjoFd0
@@ -26,6 +29,9 @@ type Youtube struct {
 }
 
 func (y *Youtube) GetLiveUrl() any {
+	if cached, ok := get(y.Rid); ok {
+		return cached
+	}
 	//proxyUrl, err := url.Parse("http://127.0.0.1:8888")
 	client := &http.Client{
 		Timeout: time.Second * 5,
@@ -51,14 +57,14 @@ func (y *Youtube) GetLiveUrl() any {
 		return nil
 	}
 	stream := res.Captures[0].String()
-	quality := getResolution(stream, y.Quality)
+	quality := y.getResolution(stream)
 	if quality != nil {
 		return *quality
 	}
 	return stream
 }
 
-func getResolution(liveurl string, quality string) *string {
+func (y *Youtube) getResolution(liveurl string) *string {
 	client := &http.Client{Timeout: time.Second * 5}
 	r, _ := http.NewRequest("GET", liveurl, nil)
 	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
@@ -80,8 +86,23 @@ func getResolution(liveurl string, quality string) *string {
 		mapping[strconv.Itoa(item.Resolution.Height)] = item.URI
 	}
 
-	if stream, ok := mapping[quality]; ok {
+	if stream, ok := mapping[y.Quality]; ok {
+		set(y.Rid, stream, 600)
 		return &stream
 	}
-	return &playlist.Playlists()[size-1].URI
+
+	stream := &playlist.Playlists()[size-1].URI
+	set(y.Rid, stream, 600)
+	return stream
+}
+
+func set(key string, data interface{}, timeout int) {
+	streamCachedMap.Store(key, data)
+	time.AfterFunc(time.Second*time.Duration(timeout), func() {
+		streamCachedMap.Delete(key)
+	})
+}
+
+func get(key string) (interface{}, bool) {
+	return streamCachedMap.Load(key)
 }
