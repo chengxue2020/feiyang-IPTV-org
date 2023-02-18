@@ -40,9 +40,8 @@ func (y *Youtube) GetLiveUrl() any {
 		},
 		//Transport: &http.Transport{Proxy: http.ProxyURL(proxyUrl)},
 	}
-	r, _ := http.NewRequest("GET", fmt.Sprintf("https://www.youtube.com/watch?v=%v", y.Rid), nil)
-	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
-	r.Header.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+	r, _ := http.NewRequest("GET", fmt.Sprintf("https://m.youtube.com/watch?v=%v", y.Rid), nil)
+	r.Header.Add("user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1")
 	resp, err := client.Do(r)
 	if err != nil {
 		return err
@@ -68,21 +67,24 @@ func (y *Youtube) getResolution(liveurl string) *string {
 	client := &http.Client{Timeout: time.Second * 5}
 	r, _ := http.NewRequest("GET", liveurl, nil)
 	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
-	resp, _ := client.Do(r)
+	resp, err := client.Do(r)
+	if err != nil {
+		return nil
+	}
 	playlist, err := m3u8.Read(resp.Body)
 	defer resp.Body.Close()
 	if err != nil {
 		return nil
 	}
 
-	size := playlist.ItemSize()
+	playlists := playlist.Playlists()
 
-	if size < 1 {
+	if len(playlists) < 1 {
 		return nil
 	}
 
 	mapping := map[string]string{}
-	for _, item := range playlist.Playlists() {
+	for _, item := range playlists {
 		mapping[strconv.Itoa(item.Resolution.Height)] = item.URI
 	}
 
@@ -91,9 +93,9 @@ func (y *Youtube) getResolution(liveurl string) *string {
 		return &stream
 	}
 
-	stream := &playlist.Playlists()[size-1].URI
+	stream := playlists[len(playlists)-1].URI
 	set(y.Rid, stream, 600)
-	return stream
+	return &stream
 }
 
 func set(key string, data interface{}, timeout int) {
