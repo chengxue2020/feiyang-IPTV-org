@@ -42,7 +42,7 @@ func (y *Youtube) GetLiveUrl() any {
 		//Transport: &http.Transport{Proxy: http.ProxyURL(proxyUrl)},
 	}
 
-	json := []byte(fmt.Sprintf(`{"context": {"client": {"hl": "en","clientVersion": "2.20210721.00.00","clientName": "WEB"}},"videoId": "%s"}`, y.Rid))
+	json := []byte(fmt.Sprintf(`{"context": {"client": {"hl": "zh","clientVersion": "16.20","clientName": "ANDROID"}},"videoId": "%s"}`, y.Rid))
 	reqBody := bytes.NewBuffer(json)
 	r, _ := http.NewRequest("POST", "https://www.youtube.com/youtubei/v1/player", reqBody)
 	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
@@ -52,17 +52,25 @@ func (y *Youtube) GetLiveUrl() any {
 	}
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
+	str := string(body)
 
-	stream := gjson.GetBytes(body, "streamingData.hlsManifestUrl").String()
-	if len(stream) < 1 {
-		return nil
+	stream := gjson.Get(str, "streamingData.hlsManifestUrl")
+	if stream.Exists() && len(stream.String()) > 0 {
+		quality := y.getResolution(stream.String())
+		if quality != nil {
+			return *quality
+		}
+		return stream
 	}
 
-	quality := y.getResolution(stream)
-	if quality != nil {
-		return *quality
+	formats := gjson.Get(str, "streamingData.formats")
+	if formats.Exists() && formats.IsArray() {
+		arr := formats.Array()
+		playback := arr[len(arr)-1].Get("url").String()
+		return playback
 	}
-	return stream
+
+	return nil
 }
 
 func (y *Youtube) getResolution(liveurl string) *string {
