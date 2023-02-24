@@ -8,14 +8,15 @@
 package liveurls
 
 import (
+	"bytes"
 	"fmt"
+	"github.com/tidwall/gjson"
 	"io"
 	"net/http"
 	"strconv"
 	"sync"
 	"time"
 
-	"github.com/dlclark/regexp2"
 	"github.com/etherlabsio/go-m3u8/m3u8"
 )
 
@@ -40,8 +41,11 @@ func (y *Youtube) GetLiveUrl() any {
 		},
 		//Transport: &http.Transport{Proxy: http.ProxyURL(proxyUrl)},
 	}
-	r, _ := http.NewRequest("GET", fmt.Sprintf("https://m.youtube.com/watch?v=%v", y.Rid), nil)
-	r.Header.Add("user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1")
+
+	json := []byte(fmt.Sprintf(`{"context": {"client": {"hl": "zh","clientVersion": "16.20","clientName": "ANDROID"}},"videoId": "%s"}`, y.Rid))
+	reqBody := bytes.NewBuffer(json)
+	r, _ := http.NewRequest("POST", "https://www.youtube.com/youtubei/v1/player", reqBody)
+	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
 	resp, err := client.Do(r)
 	if err != nil {
 		return err
@@ -50,17 +54,23 @@ func (y *Youtube) GetLiveUrl() any {
 	body, _ := io.ReadAll(resp.Body)
 	str := string(body)
 
-	reg := regexp2.MustCompile(`(?<=hlsManifestUrl":").*\.m3u8`, regexp2.RE2)
-	res, _ := reg.FindStringMatch(str)
-	if res == nil {
-		return nil
+	stream := gjson.Get(str, "streamingData.hlsManifestUrl")
+	if stream.Exists() && len(stream.String()) > 0 {
+		quality := y.getResolution(stream.String())
+		if quality != nil {
+			return *quality
+		}
+		return stream
 	}
-	stream := res.Captures[0].String()
-	quality := y.getResolution(stream)
-	if quality != nil {
-		return *quality
+
+	formats := gjson.Get(str, "streamingData.formats")
+	if formats.Exists() && formats.IsArray() {
+		arr := formats.Array()
+		playback := arr[len(arr)-1].Get("url").String()
+		return playback
 	}
-	return stream
+
+	return nil
 }
 
 func (y *Youtube) getResolution(liveurl string) *string {
