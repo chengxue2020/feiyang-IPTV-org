@@ -43,7 +43,7 @@ func (d *Douyu) GetRealUrl() any {
 	resp, _ := client.Do(r)
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
-	roomidreg := regexp.MustCompile(`(?i)rid":(\d{1,7}),"vipId`)
+	roomidreg := regexp.MustCompile(`(?i)rid":(\d{1,8}),"vipId`)
 	roomidres := roomidreg.FindStringSubmatch(string(body))
 	if roomidres == nil {
 		return nil
