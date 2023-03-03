@@ -32,7 +32,7 @@ http://你的IP:35455/douyu/xxxxx
 ```
 ### 2，选择flv时可选择不同cdn（需要加`stream`和`cdn`参数，不加参数默认`hls`和`akm-tct.douyucdn.cn`）
 ```
-http://你的IP:35455/douyu/xxxxx(?stream=flv&cdn=ws-tct)
+http://你的IP:35455/douyu/xxxxx(?stream=flv&cdn=hw-tct)
 ```
 ## **BiliBili`(live.bilibili.com/)xxxxxx`：**
 ### 1，平台platform参数选择（默认web，如果有问题，可以切换h5平台）：
