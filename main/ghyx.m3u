@@ -21,12 +21,12 @@ http://192.168.10.1:5678/ghyx.php?id=CCTV8HD_6000
 http://192.168.10.1:5678/ghyx.php?id=CCTV9HD_6000
 #EXTINF:-1,tvg-id="CCTV10" tvg-name="CCTV10" tvg-logo="https://epg.112114.xyz/logo/CCTV10.png" group-title="央视",CCTV10
 http://192.168.10.1:5678/ghyx.php?id=CCTV10HD_6000
-#EXTINF:-1,tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://epg.112114.xyz/logo/CCTV11.png" group-title="央视",CCTV11 标清
-http://192.168.10.1:5678/ghyx.php?id=CCTV11HD_2000
+#EXTINF:-1,tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://epg.112114.xyz/logo/CCTV11.png" group-title="央视",CCTV11
+http://192.168.10.1:5678/ghyx.php?id=CCTV11HD2_6000
 #EXTINF:-1,tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://epg.112114.xyz/logo/CCTV12.png" group-title="央视",CCTV12
 http://192.168.10.1:5678/ghyx.php?id=CCTV12HD_6000
-#EXTINF:-1,tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://epg.112114.xyz/logo/CCTV13.png" group-title="央视",CCTV13 标清
-http://192.168.10.1:5678/ghyx.php?id=CCTV13HD_2000
+#EXTINF:-1,tvg-id="CCTV13" tvg-name="CCTV13" tvg-logo="https://epg.112114.xyz/logo/CCTV13.png" group-title="央视",CCTV13
+http://192.168.10.1:5678/ghyx.php?id=CCTV13HD2_6000
 #EXTINF:-1,tvg-id="CCTV14" tvg-name="CCTV14" tvg-logo="https://epg.112114.xyz/logo/CCTV14.png" group-title="央视",CCTV14
 http://192.168.10.1:5678/ghyx.php?id=CCTV14HD_6000
 #EXTINF:-1,tvg-id="CCTV15" tvg-name="CCTV15" tvg-logo="https://epg.112114.xyz/logo/CCTV15.png" group-title="央视",CCTV15
