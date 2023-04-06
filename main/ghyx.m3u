@@ -97,10 +97,10 @@ http://192.168.10.1:5678/ghyx.php?id=LvYouWeiShiHD_6000
 http://192.168.10.1:5678/ghyx.php?id=NeiMengGuHD_2000
 #EXTINF:-1,tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://epg.112114.xyz/logo/山西卫视.png" group-title="卫视",山西卫视 标清
 http://192.168.10.1:5678/ghyx.php?id=ShanXiHD_2000
-#EXTINF:-1,tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="https://epg.112114.xyz/logo/陕西卫视.png" group-title="卫视",陕西卫视 标清
-http://192.168.10.1:5678/ghyx.php?id=ShannXiHD_2000
-#EXTINF:-1,tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://epg.112114.xyz/logo/云南卫视.png" group-title="卫视",云南卫视 标清
-http://192.168.10.1:5678/ghyx.php?id=YunNanHD_2000
+#EXTINF:-1,tvg-id="陕西卫视" tvg-name="陕西卫视" tvg-logo="https://epg.112114.xyz/logo/陕西卫视.png" group-title="卫视",陕西卫视
+http://192.168.10.1:5678/ghyx.php?id=ShanXiHD2_6000
+#EXTINF:-1,tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://epg.112114.xyz/logo/云南卫视.png" group-title="卫视",云南卫视
+http://192.168.10.1:5678/ghyx.php?id=YunNanHD2_6000
 #EXTINF:-1,tvg-id="兵团卫视" tvg-name="兵团卫视" tvg-logo="https://epg.112114.xyz/logo/兵团卫视.png" group-title="卫视",兵团卫视 标清
 http://192.168.10.1:5678/ghyx.php?id=BTTVHD_2000
 #EXTINF:-1,tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://epg.112114.xyz/logo/贵州卫视.png" group-title="卫视",贵州卫视 标清
@@ -111,8 +111,8 @@ http://192.168.10.1:5678/ghyx.php?id=QingHaiHD_2000
 http://192.168.10.1:5678/ghyx.php?id=XiZangHD_2000
 #EXTINF:-1,tvg-id="新疆卫视" tvg-name="新疆卫视" tvg-logo="https://epg.112114.xyz/logo/新疆卫视.png" group-title="卫视",新疆卫视 标清
 http://192.168.10.1:5678/ghyx.php?id=XinJiangHD_2000
-#EXTINF:-1,tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://epg.112114.xyz/logo/甘肃卫视.png" group-title="卫视",甘肃卫视 标清
-http://192.168.10.1:5678/ghyx.php?id=GanSuHD_2000
+#EXTINF:-1,tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://epg.112114.xyz/logo/甘肃卫视.png" group-title="卫视",甘肃卫视
+http://192.168.10.1:5678/ghyx.php?id=GanSuHD2_6000
 #EXTINF:-1,tvg-id="厦门卫视" tvg-name="厦门卫视" tvg-logo="https://epg.112114.xyz/logo/厦门卫视.png" group-title="卫视",厦门卫视 标清
 http://192.168.10.1:5678/ghyx.php?id=XiaMenHD_2000
 #EXTINF:-1,tvg-id="宁夏卫视" tvg-name="宁夏卫视" tvg-logo="https://epg.112114.xyz/logo/宁夏卫视.png" group-title="卫视",宁夏卫视 标清
