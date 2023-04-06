@@ -93,6 +93,8 @@ http://192.168.10.1:5678/ghyx.php?id=HeiLongJiangHD_6000
 http://192.168.10.1:5678/ghyx.php?id=JiLinWeiShiHD_6000
 #EXTINF:-1,tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://epg.112114.xyz/logo/海南卫视.png" group-title="卫视",海南卫视
 http://192.168.10.1:5678/ghyx.php?id=LvYouWeiShiHD_6000
+#EXTINF:-1,tvg-id="三沙卫视" tvg-name="三沙卫视" tvg-logo="https://epg.112114.xyz/logo/三沙卫视.png" group-title="卫视",三沙卫视
+http://192.168.10.1:5678/ghyx.php?id=SanShaHD2_6000
 #EXTINF:-1,tvg-id="内蒙古卫视" tvg-name="内蒙古卫视" tvg-logo="https://epg.112114.xyz/logo/内蒙古卫视.png" group-title="卫视",内蒙古卫视 标清
 http://192.168.10.1:5678/ghyx.php?id=NeiMengGuHD_2000
 #EXTINF:-1,tvg-id="山西卫视" tvg-name="山西卫视" tvg-logo="https://epg.112114.xyz/logo/山西卫视.png" group-title="卫视",山西卫视 标清
