@@ -63,8 +63,6 @@ func (d *Douyin) GetRealurl() any {
 	str, _ := url.QueryUnescape(string(body))
 	json.Unmarshal([]byte(str), &mediamap)
 	json.Unmarshal([]byte(str), &roomstatus)
-	fmt.Println(roomstatus["data"]["room"]["status"])
-	fmt.Printf("%T", roomstatus["data"]["room"]["status"])
 	var realurl any
 	if mediaslice, ok := mediamap["data"]["room"]["stream_url"]["hls_pull_url_map"].(map[string]any); ok {
 		for k, v := range mediaslice {
