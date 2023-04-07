@@ -9,6 +9,7 @@ package liveurls
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -16,7 +17,6 @@ import (
 )
 
 type Douyin struct {
-	Quality  string
 	Shorturl string
 	Rid      string
 }
@@ -45,7 +45,7 @@ func GetRoomId(url string) any {
 }
 
 func (d *Douyin) GetRealurl() any {
-	var mediamap map[string]map[string]map[string]map[string]map[string]any
+	var mediamap map[string]map[string]map[string]map[string]any
 	var roomid string
 	if str, ok := GetRoomId(d.Shorturl).(string); ok {
 		roomid = str
@@ -53,72 +53,20 @@ func (d *Douyin) GetRealurl() any {
 		return nil
 	}
 	client := &http.Client{}
-	params := map[string]string{
-		"aid":              "6383",
-		"live_id":          "1",
-		"device_platform":  "web",
-		"language":         "zh-CN",
-		"enter_from":       "web_search",
-		"cookie_enabled":   "true",
-		"screen_width":     "1920",
-		"screen_height":    "1080",
-		"browser_language": "zh-CN",
-		"browser_name":     "Chrome",
-		"room_id":          roomid,
-		"scene":            "pc_stream_4k",
-	}
-
-	r, _ := http.NewRequest("GET", "https://live.douyin.com/webcast/room/info_by_scene/?", nil)
-	q := r.URL.Query()
-	for k, v := range params {
-		q.Add(k, v)
-	}
-	r.URL.RawQuery = q.Encode()
+	r, _ := http.NewRequest("GET", "https://webcast.amemv.com/webcast/room/reflow/info/?type_id=0&live_id=1&room_id="+roomid+"&sec_user_id=&app_id=1128", nil)
+	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
+	r.Header.Add("upgrade-insecure-requests", "1")
 	resp, _ := client.Do(r)
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 	str, _ := url.QueryUnescape(string(body))
 	json.Unmarshal([]byte(str), &mediamap)
 	var realurl any
-	if mediaslice, ok := mediamap["data"]["stream_url"]["live_core_sdk_data"]["pull_data"]["Hls"].([]any); ok {
-		for _, v := range mediaslice {
-			if newmediamap, ok := v.(map[string]any); ok {
-				for k := range newmediamap {
-					switch d.Quality {
-					case "uhd":
-						{
-							if newmediamap[k] == "uhd" {
-								realurl = newmediamap["url"]
-							}
-						}
-					case "origin":
-						{
-							if newmediamap[k] == "origin" {
-								realurl = newmediamap["url"]
-							}
-						}
-					case "hd":
-						{
-							if newmediamap[k] == "hd" {
-								realurl = newmediamap["url"]
-							}
-						}
-					case "sd":
-						{
-							if newmediamap[k] == "sd" {
-								realurl = newmediamap["url"]
-							}
-						}
-					case "ld":
-						{
-							if newmediamap[k] == "ld" {
-								realurl = newmediamap["url"]
-							}
-						}
-					}
-				}
+	if mediaslice, ok := mediamap["data"]["room"]["stream_url"]["hls_pull_url_map"].(map[string]any); ok {
+		for k, v := range mediaslice {
+			if k == "FULL_HD1" {
+				realurl = fmt.Sprintf("%v", v)
 			}
-
 		}
 	}
 	return realurl
