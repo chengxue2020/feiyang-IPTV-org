@@ -46,6 +46,7 @@ func GetRoomId(url string) any {
 
 func (d *Douyin) GetRealurl() any {
 	var mediamap map[string]map[string]map[string]map[string]any
+	var roomstatus map[string]map[string]map[string]int
 	var roomid string
 	if str, ok := GetRoomId(d.Shorturl).(string); ok {
 		roomid = str
@@ -61,11 +62,17 @@ func (d *Douyin) GetRealurl() any {
 	body, _ := io.ReadAll(resp.Body)
 	str, _ := url.QueryUnescape(string(body))
 	json.Unmarshal([]byte(str), &mediamap)
+	json.Unmarshal([]byte(str), &roomstatus)
+	fmt.Println(roomstatus["data"]["room"]["status"])
+	fmt.Printf("%T", roomstatus["data"]["room"]["status"])
 	var realurl any
 	if mediaslice, ok := mediamap["data"]["room"]["stream_url"]["hls_pull_url_map"].(map[string]any); ok {
 		for k, v := range mediaslice {
 			if k == "FULL_HD1" {
 				realurl = fmt.Sprintf("%v", v)
+			}
+			if roomstatus["data"]["room"]["status"] != 2 {
+				realurl = nil
 			}
 		}
 	}
