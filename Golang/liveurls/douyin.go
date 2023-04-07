@@ -54,8 +54,8 @@ func (d *Douyin) GetRealurl() any {
 	}
 	client := &http.Client{}
 	r, _ := http.NewRequest("GET", "https://webcast.amemv.com/webcast/room/reflow/info/?type_id=0&live_id=1&room_id="+roomid+"&sec_user_id=&app_id=1128", nil)
-	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
-	r.Header.Add("upgrade-insecure-requests", "1")
+	r.Header.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+	r.Header.Add("user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1")
 	resp, _ := client.Do(r)
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
