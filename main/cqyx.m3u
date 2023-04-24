@@ -19,6 +19,8 @@ http://192.168.10.1:5678/cqyx.php?id=cctv3HD
 http://192.168.10.1:5678/cqyx.php?id=cctv4HD
 #EXTINF:-1,tvg-id="CCTV5" tvg-name="CCTV5" tvg-logo="https://epg.112114.xyz/logo/CCTV5.png" group-title="央视",CCTV5体育高清
 http://192.168.10.1:5678/cqyx.php?id=cctv5HD
+#EXTINF:-1,tvg-id="CCTV5" tvg-name="CCTV5+" tvg-logo="https://epg.112114.xyz/logo/CCTV5+.png" group-title="央视",CCTV5P高清
+http://192.168.10.1:5678/cqyx.php?id=cctv5SportHD
 #EXTINF:-1,tvg-id="CCTV6" tvg-name="CCTV6" tvg-logo="https://epg.112114.xyz/logo/CCTV6.png" group-title="央视",CCTV6电影高清
 http://192.168.10.1:5678/cqyx.php?id=cctv6HD
 #EXTINF:-1,tvg-id="CCTV7" tvg-name="CCTV7" tvg-logo="https://epg.112114.xyz/logo/CCTV7.png" group-title="央视",CCTV7国防军事高清
