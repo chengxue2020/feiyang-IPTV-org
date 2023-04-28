@@ -12,7 +12,7 @@ http://111.20.35.103:6610/yinhe/2/ch00000090990000002156/index.m3u8?virtualDomai
 #EXTINF:-1 tvg-name="欢笑剧场4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/592C8D88-DA83-41ED-8824-E2E2E54E396C.png" group-title="4K频道",欢笑剧场4K
 http://113.207.84.197:8090/__cl/cg:live/__c/hxjc_4K/__op/default/__f/index.m3u8
 #EXTINF:-1 tvg-name="纯享4K" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/cx4k.png" group-title="4K频道",纯享4K
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225786/index.m3u8
+http://39.135.138.58:18890/PLTV/88888888/224/3221225786/index.m3u8
 #EXTINF:-1 tvg-name="纯享4K备" tvg-logo="https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/cx4k.png" group-title="4K频道",纯享4K备
 http://39.134.115.163:8080/PLTV/88888910/224/3221225786/index.m3u8
 #EXTINF:-1 tvg-name="CCTV4K-25P-HLG源" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV4k.png" group-title="4K频道",CCTV4K-25P-HLG源
