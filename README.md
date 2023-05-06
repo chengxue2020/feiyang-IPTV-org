@@ -1,5 +1,4 @@
 # IPTV
-**直播源在线地址综合汇总:[点击查看](https://github.com/youshandefeiyang/live-Url)**  
 **肥羊影音数码综合Telegram交流群:[点击加入](https://t.me/feiyangdigital)**  
 **肥羊影音数码综合Telegram频道:[点击加入](https://t.me/feiyangofficalchannel)**  
 # 免责声明
