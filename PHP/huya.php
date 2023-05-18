@@ -101,7 +101,7 @@ $reg = "/\<script\> window.HNF_GLOBAL_INIT = (.*) \<\/script\>/i";
 preg_match($reg, $res, $realres);
 $realdata = json_decode($realres[1], true);
 
-if (in_array(0, $realdata)) {
+if (in_array(0, $realdata) or in_array(1, $realdata)) {
     header('location:' . $mediaurl);
     exit();
 } elseif ($realdata["roomInfo"]["eLiveStatus"] == 2) {
