@@ -18,12 +18,4 @@ docker cp /你的本地PHP文件地址/xxx.php php-env:/var/www/html/
 ```
 http://你的IP:5678/xxx.php?id=xxx&xx=xxx...
 ```
-### `gudou.php`使用方法：  
-1.需要在ROOT的安卓手机/安卓模拟器安装抓包工具   
-2.安装豆豆  
-3.注册并登录自己的手机号码，开启抓包后筛选关键词`aut002`，然后`puser`是你的手机号，你需要记录`ptoken`和`pserialnumber`以及`cid`  
-4.最后在IPTV播放器访问∶  
-```
-http://你的IP:5678/gudou.php?phone=你的手机号&ptoken=你的ptoken&pserialnumber=你的pserialnumber&cid=你的cid&id=谷豆频道对应id
-```
 ### 小白可以直接参考视频教程∶[点击观看](https://v1.mk/php)
