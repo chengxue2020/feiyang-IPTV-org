@@ -2,17 +2,17 @@
 date_default_timezone_set("Asia/Shanghai");
 $id = isset($_GET['id'])?$_GET['id']:'jxws';
 $n = [
-    'jxws' => 'tv_jxtv1.m3u8',//江西卫视
-    'jxds' => 'tv_jxtv2.m3u8',//江西都市
-    'jxjs' => 'tv_jxtv3.m3u8',//江西经视
-    'jxjshd' => 'tv_jxtv3_hd.m3u8',//江西经视高清
-    'jxys' => 'tv_jxtv4.m3u8',//江西影视
-    'jxgg' => 'tv_jxtv5.m3u8',//江西公共
-    'jxse' => 'tv_jxtv6.m3u8',//江西少儿
-    'jxxw' => 'tv_jxtv7.m3u8',//江西新闻
-    'jxyd' => 'tv_jxtv8.m3u8',//江西移动
-    'fsgw' => 'tv_fsgw.m3u8',//江西风尚购物
-    'jxtc' => 'tv_taoci.m3u8',//江西陶瓷
+    'jxws' => 'tv_jxtv1.m3u8',
+    'jxds' => 'tv_jxtv2.m3u8',
+    'jxjs' => 'tv_jxtv3.m3u8',
+    'jxjshd' => 'tv_jxtv3_hd.m3u8',
+    'jxys' => 'tv_jxtv4.m3u8',
+    'jxgg' => 'tv_jxtv5.m3u8',
+    'jxse' => 'tv_jxtv6.m3u8',
+    'jxxw' => 'tv_jxtv7.m3u8',
+    'jxyd' => 'tv_jxtv8.m3u8',
+    'fsgw' => 'tv_fsgw.m3u8',
+    'jxtc' => 'tv_taoci.m3u8',
 ];
 $timestamp = time();
 function etag() {
