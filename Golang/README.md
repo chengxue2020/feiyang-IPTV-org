@@ -60,9 +60,22 @@ http://你的IP:35455/douyu/xxxxx(?stream=flv&cdn=hw-tct)
 ```
 http://你的IP:35455/bilibili/xxxxxx(?platform=h5&line=first&quality=10000)
 ```
-## **虎牙`(huya.com/)xxxxxx`：**
+## **虎牙`(huya.com/)xxxxxx`：**  
+### 1，查看可用CDN：
 ```
-http://你的IP:35455/huya/xxxxx
+http://你的IP:35455/huya/xxxxx?type=display
+```
+### 2，切换媒体类型（默认flv，可选flv、hls）： 
+```
+http://你的IP:35455/huya/xxxxx?media=hls
+```
+### 3，切换CDN（默认hwcdn，可选hycdn、alicdn、txcdn、hwcdn、hscdn、wscdn，具体可先访问1获取）：
+```
+http://你的IP:35455/huya/xxxxx?cdn=alicdn
+```
+### 4，最后的代理链接示例：
+```
+http://你的IP:35455/huya/xxxxx(?media=xxx&cdn=xxx)
 ```
 ## **YouTube:**
 ```
