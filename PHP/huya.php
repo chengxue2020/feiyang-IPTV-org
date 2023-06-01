@@ -131,7 +131,7 @@ if (array_key_exists("exceptionType", $realdata)) {
         }
     }
     header('location:' . $mediaurl);
-    exit;
+    exit();
 } elseif ($realdata["roomInfo"]["eLiveStatus"] == 3) {
     header('location:' . "http:" . base64_decode($realdata["roomProfile"]["liveLineUrl"]));
     exit();
