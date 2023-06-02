@@ -38,6 +38,7 @@ func getDid() string {
 	timeStamp := strconv.FormatInt(time.Now().UnixNano()/1000000, 10)
 	url := "https://passport.douyu.com/lapi/did/api/get?client_id=25&_=" + timeStamp + "&callback=axiosJsonpCallback1"
 	req, _ := http.NewRequest("GET", url, nil)
+	req.Header.Add("user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1")
 	req.Header.Set("referer", "https://m.douyu.com/")
 	resp, _ := client.Do(req)
 	defer resp.Body.Close()
@@ -55,7 +56,7 @@ func (d *Douyu) GetRealUrl() any {
 	liveurl := "https://m.douyu.com/" + d.Rid
 	client := &http.Client{}
 	r, _ := http.NewRequest("GET", liveurl, nil)
-	r.Header.Add("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
+	r.Header.Add("user-agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1")
 	r.Header.Add("upgrade-insecure-requests", "1")
 	resp, _ := client.Do(r)
 	defer resp.Body.Close()
