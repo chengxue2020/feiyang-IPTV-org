@@ -23,4 +23,4 @@
 **您以任何形式阅读/使用/复制/修改了本仓库内容，则视为已接受此免责声明，请仔细阅读**  
 # 致谢
 ## 非常感谢JetBrains对本项目的大力支持：
-![](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains-training-partner.png?_gl=1*1vnhrhf*_ga*MzYxNDkyNDcuMTY1NzYwMDY3Mw..*_ga_9J976DJZ68*MTY4NTcxNDc2OS43LjEuMTY4NTcxNDc4Ny4wLjAuMA..&_ga=2.76728277.1761314961.1685714770-36149247.1657600673)
+![Training Partner logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains-training-partner.png)
