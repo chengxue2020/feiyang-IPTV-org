@@ -15,6 +15,7 @@ import (
 	"io"
 	"net/http"
 	"regexp"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -32,8 +33,24 @@ func md5V3(str string) string {
 	return md5str
 }
 
+func getDid() string {
+	client := &http.Client{}
+	timeStamp := strconv.FormatInt(time.Now().UnixNano()/1000000, 10)
+	url := "https://passport.douyu.com/lapi/did/api/get?client_id=25&_=" + timeStamp + "&callback=axiosJsonpCallback1"
+	req, _ := http.NewRequest("GET", url, nil)
+	req.Header.Set("referer", "https://m.douyu.com/")
+	resp, _ := client.Do(req)
+	defer resp.Body.Close()
+	body, _ := io.ReadAll(resp.Body)
+	re := regexp.MustCompile(`axiosJsonpCallback1\((.*)\)`)
+	match := re.FindStringSubmatch(string(body))
+	var result map[string]map[string]string
+	json.Unmarshal([]byte(match[1]), &result)
+	return result["data"]["did"]
+}
+
 func (d *Douyu) GetRealUrl() any {
-	const did = "10000000000000000000000000001501"
+	did := getDid()
 	var timestamp = time.Now().Unix()
 	liveurl := "https://m.douyu.com/" + d.Rid
 	client := &http.Client{}
@@ -97,7 +114,7 @@ func (d *Douyu) GetRealUrl() any {
 		panic(n3err)
 	}
 	param := fmt.Sprintf("%s", result2)
-	realparam := param + "&ver=219032101&rid=" + realroomid + "&rate=0"
+	realparam := param + "&ver=22107261&rid=" + realroomid + "&rate=-1"
 	r1, n4err := http.Post("https://m.douyu.com/api/room/ratestream", "application/x-www-form-urlencoded", strings.NewReader(realparam))
 	if n4err != nil {
 		panic(n4err)
