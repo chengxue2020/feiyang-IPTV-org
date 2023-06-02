@@ -21,3 +21,6 @@
 **所有直接或间接使用本仓库内容的个人和组织，应 24 小时内完成学习和研究，并及时删除本仓库内容。如对本仓库内容的功能有需求，应自行开发相关功能**  
 **您必须在下载后的 24 小时内从您以任何形式存放或使用本仓库内容的任何硬件/软件/介质中完全删除本仓库内容**  
 **您以任何形式阅读/使用/复制/修改了本仓库内容，则视为已接受此免责声明，请仔细阅读**  
+# 致谢
+## 非常感谢JetBrains对本项目的大力支持：
+![](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains-training-partner.png?_gl=1*1vnhrhf*_ga*MzYxNDkyNDcuMTY1NzYwMDY3Mw..*_ga_9J976DJZ68*MTY4NTcxNDc2OS43LjEuMTY4NTcxNDc4Ny4wLjAuMA..&_ga=2.76728277.1761314961.1685714770-36149247.1657600673)
