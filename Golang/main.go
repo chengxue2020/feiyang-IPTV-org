@@ -48,7 +48,7 @@ func setupRouter(adurl string) *gin.Engine {
 		pageCount := result.ITotalPage
 		pageSize := result.IPageSize
 		c.Writer.Header().Set("Content-Type", "application/octet-stream")
-		c.Writer.Header().Set("Content-Disposition", "attachment; filename=HuYaYqk.m3u")
+		c.Writer.Header().Set("Content-Disposition", "attachment; filename=huyayqk.m3u")
 
 		fmt.Fprintln(c.Writer, "#EXTM3U")
 		fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
@@ -77,7 +77,7 @@ func setupRouter(adurl string) *gin.Engine {
 		pageCount := result.Data.Pgcnt
 
 		c.Writer.Header().Set("Content-Type", "application/octet-stream")
-		c.Writer.Header().Set("Content-Disposition", "attachment; filename=Douyuyqk.m3u")
+		c.Writer.Header().Set("Content-Disposition", "attachment; filename=douyuyqk.m3u")
 
 		fmt.Fprintln(c.Writer, "#EXTM3U")
 		fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
