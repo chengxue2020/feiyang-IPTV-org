@@ -16,8 +16,8 @@ import (
 	"github.com/forgoer/openssl"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"net/url"
 	"strconv"
-	"os"
 )
 
 func duanyan(adurl string, realurl any) string {
@@ -31,11 +31,9 @@ func duanyan(adurl string, realurl any) string {
 }
 
 func getLivePrefix(c *gin.Context) string {
-	prefix := os.Getenv("LIVE_PREFIX")
-	if len(prefix) > 0 {
-		return prefix
-	}
-	return fmt.Sprintf("http://%s", c.Request.Host)
+	firstUrl := c.DefaultQuery("url", "https://www.goodiptv.club")
+	realUrl, _ := url.QueryUnescape(firstUrl)
+	return realUrl
 }
 
 func setupRouter(adurl string) *gin.Engine {
