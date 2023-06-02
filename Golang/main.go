@@ -141,6 +141,11 @@ func setupRouter(adurl string) *gin.Engine {
 			ytbObj.Rid = rid
 			ytbObj.Quality = c.DefaultQuery("quality", "1080")
 			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, ytbObj.GetLiveUrl()))
+		case "yy":
+			yyObj := &liveurls.Yy{}
+			yyObj.Rid = rid
+			yyObj.Quality = c.DefaultQuery("quality", "4")
+			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, yyObj.GetLiveUrl()))
 		}
 	})
 	return r
