@@ -30,6 +30,14 @@ func duanyan(adurl string, realurl any) string {
 	return liveurl
 }
 
+func getTestVideoUrl(c *gin.Context) {
+	fmt.Fprintln(c.Writer, "#EXTM3U")
+	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
+	fmt.Fprintln(c.Writer, "http://159.75.85.63:5680/d/ad/h264/playad.m3u8")
+	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PHLG-HEVC-EAC3测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PHLG-HEVC-EAC3测试")
+	fmt.Fprintln(c.Writer, "http://159.75.85.63:5680/d/ad/playad.m3u8")
+}
+
 func getLivePrefix(c *gin.Context) string {
 	firstUrl := c.DefaultQuery("url", "https://www.goodiptv.club")
 	realUrl, _ := url.QueryUnescape(firstUrl)
@@ -41,9 +49,9 @@ func setupRouter(adurl string) *gin.Engine {
 	r := gin.Default()
 
 	r.GET("/douyin", func(c *gin.Context) {
-		url := c.Query("url")
+		vrurl := c.Query("url")
 		douyinobj := &liveurls.Douyin{}
-		douyinobj.Shorturl = url
+		douyinobj.Shorturl = vrurl
 		c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyinobj.GetRealurl()))
 	})
 
@@ -56,12 +64,7 @@ func setupRouter(adurl string) *gin.Engine {
 		pageSize := result.IPageSize
 		c.Writer.Header().Set("Content-Type", "application/octet-stream")
 		c.Writer.Header().Set("Content-Disposition", "attachment; filename=huyayqk.m3u")
-
-		fmt.Fprintln(c.Writer, "#EXTM3U")
-		fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
-		fmt.Fprintln(c.Writer, "http://159.75.85.63:5680/d/ad/h264/playad.m3u8")
-		fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PHLG-HEVC-EAC3测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PHLG-HEVC-EAC3测试")
-		fmt.Fprintln(c.Writer, "http://159.75.85.63:5680/d/ad/playad.m3u8")
+		getTestVideoUrl(c)
 
 		for i := 1; i <= pageCount; i++ {
 			apiRes, _ := yaobj.HuYaYqk(fmt.Sprintf("https://live.cdn.huya.com/liveHttpUI/getLiveList?iGid=2135&iPageNo=%d&iPageSize=%d", i, pageSize))
@@ -85,12 +88,7 @@ func setupRouter(adurl string) *gin.Engine {
 
 		c.Writer.Header().Set("Content-Type", "application/octet-stream")
 		c.Writer.Header().Set("Content-Disposition", "attachment; filename=douyuyqk.m3u")
-
-		fmt.Fprintln(c.Writer, "#EXTM3U")
-		fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PSDR-H264-AAC测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PSDR-H264-AAC测试")
-		fmt.Fprintln(c.Writer, "http://159.75.85.63:5680/d/ad/h264/playad.m3u8")
-		fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\"4K60PHLG-HEVC-EAC3测试\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"4K频道\",4K60PHLG-HEVC-EAC3测试")
-		fmt.Fprintln(c.Writer, "http://159.75.85.63:5680/d/ad/playad.m3u8")
+		getTestVideoUrl(c)
 
 		for i := 1; i <= pageCount; i++ {
 			apiRes, _ := yuobj.Douyuyqk("https://www.douyu.com/gapi/rkc/directory/mixList/2_208/" + strconv.Itoa(i))
