@@ -7,6 +7,7 @@ COPY ./Golang/go.sum ./
 RUN go mod download
 
 COPY ./Golang/*.go ./
+COPY ./Golang/list/*.go ./list/
 COPY ./Golang/liveurls/*.go ./liveurls/
 
 RUN go build -o /allinone
