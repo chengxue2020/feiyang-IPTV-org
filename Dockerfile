@@ -17,5 +17,6 @@ FROM alpine:3.14
 COPY --from=build /allinone /allinone
 
 EXPOSE 35455
+ENV LIVE_PREFIX=https://www.goodiptv.club
 
 CMD [ "/allinone" ]

@@ -17,6 +17,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
+	"os"
 )
 
 func duanyan(adurl string, realurl any) string {
@@ -27,6 +28,14 @@ func duanyan(adurl string, realurl any) string {
 		liveurl = adurl
 	}
 	return liveurl
+}
+
+func getLivePrefix(c *gin.Context) string {
+	prefix := os.Getenv("LIVE_PREFIX")
+	if len(prefix) > 0 {
+		return prefix
+	}
+	return fmt.Sprintf("http://%s", c.Request.Host)
 }
 
 func setupRouter(adurl string) *gin.Engine {
@@ -63,7 +72,7 @@ func setupRouter(adurl string) *gin.Engine {
 			data := res.VList
 			for _, value := range data {
 				fmt.Fprintf(c.Writer, "#EXTINF:-1 tvg-logo=\"%s\" group-title=\"%s\", %s\n", value.SAvatar180, value.SGameFullName, value.SNick)
-				fmt.Fprintf(c.Writer, "https://www.goodiptv.club/huya/%v\n", value.LProfileRoom)
+				fmt.Fprintf(c.Writer, "%s/huya/%v\n", getLivePrefix(c), value.LProfileRoom)
 			}
 		}
 	})
@@ -94,7 +103,7 @@ func setupRouter(adurl string) *gin.Engine {
 
 			for _, value := range data {
 				fmt.Fprintf(c.Writer, "#EXTINF:-1 tvg-logo=\"https://apic.douyucdn.cn/upload/%s_big.jpg\" group-title=\"%s\", %s\n", value.Av, value.C2name, value.Nn)
-				fmt.Fprintf(c.Writer, "https://www.goodiptv.club/douyu/%v\n", value.Rid)
+				fmt.Fprintf(c.Writer, "%s/douyu/%v\n", getLivePrefix(c), value.Rid)
 			}
 		}
 	})
