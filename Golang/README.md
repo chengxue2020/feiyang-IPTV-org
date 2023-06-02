@@ -96,4 +96,9 @@ https://www.youtube.com/watch?v=cK4LemjoFd0
 Rid: cK4LemjoFd0
 http://你的IP:35455/youtube/cK4LemjoFd0(?quality=1080/720...)
 ```
+## **YY（默认最高画质，参数为4）:**
+```
+https://www.yy.com/xxxx
+http://你的IP:35455/yy/xxxx(?quality=1/2/3/4...)
+```
 ## 更多平台后续会酌情添加
