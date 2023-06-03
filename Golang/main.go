@@ -116,7 +116,7 @@ func setupRouter(adurl string) *gin.Engine {
 			var res list.ApiResponse
 			json.Unmarshal([]byte(apiRes), &res)
 			for _, value := range res.Data.Data {
-				fmt.Fprintf(c.Writer, "#EXTINF:-1 tvg-logo=\"%s\" group-title=\"%s\", \"%s\"\n", value.Avatar, value.Biz, value.Desc)
+				fmt.Fprintf(c.Writer, "#EXTINF:-1 tvg-logo=\"%s\" group-title=\"%s\", %s\n", value.Avatar, value.Biz, value.Desc)
 				fmt.Fprintf(c.Writer, "%s/yy/%v\n", getLivePrefix(c), value.Sid)
 			}
 			if res.Data.IsLastPage == 1 {
