@@ -107,7 +107,7 @@ func setupRouter(adurl string) *gin.Engine {
 	r.GET("/yylunbo.m3u", func(c *gin.Context) {
 		yylistobj := &list.Yylist{}
 		c.Writer.Header().Set("Content-Type", "application/octet-stream")
-		c.Writer.Header().Set("Content-Disposition", "attachment; filename=douyuyqk.m3u")
+		c.Writer.Header().Set("Content-Disposition", "attachment; filename=yylunbo.m3u")
 		getTestVideoUrl(c)
 
 		i := 1
