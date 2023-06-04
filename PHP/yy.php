@@ -39,7 +39,7 @@ if (count($realdata) > 0) {
 
 $millis_13 = round(microtime(true) * 1000);
 $millis_10 = time();
-$data = '{"head":{"seq":' . $millis_13 . ',"appidstr":"0","bidstr":"121","cidstr":"' . $rid . '","sidstr":"' . $rid . '","uid64":0,"client_type":108,"client_ver":"5.11.0-alpha.4","stream_sys_ver":1,"app":"yylive_web","playersdk_ver":"5.11.0-alpha.4","thundersdk_ver":"0","streamsdk_ver":"5.11.0-alpha.4"},"client_attribute":{"client":"web","model":"","cpu":"","graphics_card":"","os":"chrome","osversion":"106.0.0.0","vsdk_version":"","app_identify":"","app_version":"","business":"","width":"1536","height":"864","scale":"","client_type":8,"h265":0},"avp_parameter":{"version":1,"client_type":8,"service_type":0,"imsi":0,"send_time":' . $millis_10 . ',"line_seq":-1,"gear":' . $quality . ',"ssl":1,"stream_format":0}}';
+$data = '{"head":{"seq":' . $millis_13 . ',"appidstr":"0","bidstr":"121","cidstr":"' . $rid . '","sidstr":"' . $rid . '","uid64":0,"client_type":108,"client_ver":"5.14.13","stream_sys_ver":1,"app":"yylive_web","playersdk_ver":"5.14.13","thundersdk_ver":"0","streamsdk_ver":"5.14.13"},"client_attribute":{"client":"web","model":"","cpu":"","graphics_card":"","os":"chrome","osversion":"106.0.0.0","vsdk_version":"","app_identify":"","app_version":"","business":"","width":"1536","height":"864","scale":"","client_type":8,"h265":0},"avp_parameter":{"version":1,"client_type":8,"service_type":0,"imsi":0,"send_time":' . $millis_10 . ',"line_seq":-1,"gear":' . $quality . ',"ssl":1,"stream_format":0}}';
 $url = "https://stream-manager.yy.com/v3/channel/streams?uid=0&cid=$rid&sid=$rid&appid=0&sequence=$millis_13&encode=json";
 $headers = array(
     'Content-Type: text/plain;charset=UTF-8',
