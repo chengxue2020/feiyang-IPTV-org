@@ -181,6 +181,9 @@ func (h *Huya) GetLiveUrl() any {
 	str := string(body)
 	freg := regexp.MustCompile(`"(?i)liveLineUrl":"([\s\S]*?)",`)
 	res := freg.FindStringSubmatch(str)
+	if h.Media == "hls" {
+		res = nil
+	}
 	if res == nil || res[1] == "" {
 		sreg := regexp.MustCompile(`(?i)<script> window.HNF_GLOBAL_INIT = (.*) </script>`)
 		nres := sreg.FindStringSubmatch(str)
