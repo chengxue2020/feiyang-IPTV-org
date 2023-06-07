@@ -11,7 +11,6 @@ import (
 	"bytes"
 	"crypto/md5"
 	"encoding/base64"
-	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -143,12 +142,10 @@ func processAntiCode(antiCode string, uid int, streamName string) string {
 	q.Set("seqid", seqId)
 	q.Set("uid", strconv.Itoa(uid))
 	q.Set("uuid", strconv.FormatInt(getUUID(), 10))
-	ss := md5huya([]byte(seqId + "|" + q.Get("ctype") + "|" + q.Get("t")))
+	ss := md5huya(seqId + "|" + q.Get("ctype") + "|" + q.Get("t"))
 	fm, _ := base64.StdEncoding.DecodeString(q.Get("fm"))
 	q.Set("fm", strings.Replace(strings.Replace(strings.Replace(strings.Replace(string(fm), "$0", q.Get("uid"), -1), "$1", streamName, -1), "$2", ss, -1), "$3", q.Get("wsTime"), -1))
-	h.Reset()
-	h.Write([]byte(q.Get("fm")))
-	q.Set("wsSecret", hex.EncodeToString(h.Sum(nil)))
+	q.Set("wsSecret", md5huya(q.Get("fm")))
 	q.Del("fm")
 	if _, ok := q["txyp"]; ok {
 		q.Del("txyp")
