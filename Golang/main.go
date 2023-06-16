@@ -52,6 +52,14 @@ func setupRouter(adurl string) *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
+  r.HEAD("/", func(c *gin.Context) {
+		c.String(http.StatusOK,"请求成功！")
+	})
+
+  r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK,"请求成功！")
+	})
+  
 	r.GET("/douyin", func(c *gin.Context) {
 		vrurl := c.Query("url")
 		douyinobj := &liveurls.Douyin{}
