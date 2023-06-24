@@ -32,7 +32,8 @@ func duanyan(adurl string, realurl any) string {
 }
 
 func getTestVideoUrl(c *gin.Context) {
-	str_time := time.Now().Format("2006-01-02 15:04:05")
+	TimeLocation, _ := time.LoadLocation("Asia/Shanghai")
+    str_time := time.Now().In(TimeLocation).Format("2006-01-02 15:04:05")
 	fmt.Fprintln(c.Writer, "#EXTM3U")
 	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\""+str_time+"\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"列表更新时间\","+str_time)
 	fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/youshandefeiyang/testvideo/time/time.mp4")
