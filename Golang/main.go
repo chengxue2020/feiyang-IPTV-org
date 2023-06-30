@@ -65,9 +65,11 @@ func setupRouter(adurl string) *gin.Engine {
 	})
 
 	r.GET("/douyin", func(c *gin.Context) {
-		vrurl := c.Query("url")
+		url := c.Query("url")
+		quality := c.DefaultQuery("quality", "origin")
 		douyinobj := &liveurls.Douyin{}
-		douyinobj.Shorturl = vrurl
+		douyinobj.Shorturl = url
+		douyinobj.Quality = quality
 		c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyinobj.GetRealurl()))
 	})
 
