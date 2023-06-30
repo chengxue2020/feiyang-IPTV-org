@@ -32,8 +32,11 @@ func duanyan(adurl string, realurl any) string {
 }
 
 func getTestVideoUrl(c *gin.Context) {
-	TimeLocation, _ := time.LoadLocation("Asia/Shanghai")
-    str_time := time.Now().In(TimeLocation).Format("2006-01-02 15:04:05")
+	TimeLocation, err := time.LoadLocation("Asia/Shanghai")
+	if err != nil {
+		TimeLocation = time.FixedZone("CST", 8*60*60)
+	}
+	str_time := time.Now().In(TimeLocation).Format("2006-01-02 15:04:05")
 	fmt.Fprintln(c.Writer, "#EXTM3U")
 	fmt.Fprintln(c.Writer, "#EXTINF:-1 tvg-name=\""+str_time+"\" tvg-logo=\"https://cdn.jsdelivr.net/gh/youshandefeiyang/IPTV/logo/tg.jpg\" group-title=\"列表更新时间\","+str_time)
 	fmt.Fprintln(c.Writer, "https://cdn.jsdelivr.net/gh/youshandefeiyang/testvideo/time/time.mp4")
@@ -53,20 +56,18 @@ func setupRouter(adurl string) *gin.Engine {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
-  r.HEAD("/", func(c *gin.Context) {
-		c.String(http.StatusOK,"请求成功！")
+	r.HEAD("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "请求成功！")
 	})
 
-  r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK,"请求成功！")
+	r.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "请求成功！")
 	})
-  
+
 	r.GET("/douyin", func(c *gin.Context) {
-		url := c.Query("url")
-		quality := c.DefaultQuery("quality", "origin")
+		vrurl := c.Query("url")
 		douyinobj := &liveurls.Douyin{}
-		douyinobj.Shorturl = url
-		douyinobj.Quality = quality
+		douyinobj.Shorturl = vrurl
 		c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyinobj.GetRealurl()))
 	})
 
