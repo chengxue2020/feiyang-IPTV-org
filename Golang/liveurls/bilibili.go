@@ -59,14 +59,13 @@ func (b *BiliBili) GetPlayUrl() any {
 	}
 	client := &http.Client{}
 	params := map[string]string{
-		"device":   "phone",
-		"scale":    "3",
 		"room_id":  roomid,
 		"protocol": "0,1",
 		"format":   "0,1,2",
 		"codec":    "0,1",
-		"build":    b.Quality,
+		"qn":       b.Quality,
 		"platform": b.Platform,
+		"ptype":    "8",
 	}
 	r, _ := http.NewRequest("GET", "https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo", nil)
 	q := r.URL.Query()
