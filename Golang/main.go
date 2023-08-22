@@ -172,7 +172,7 @@ func setupRouter(adurl string) *gin.Engine {
 			biliobj.Rid = rid
 			biliobj.Platform = c.DefaultQuery("platform", "html5")
 			biliobj.Quality = c.DefaultQuery("quality", "10000")
-			biliobj.Line = c.DefaultQuery("line", "second")
+			biliobj.Line = c.DefaultQuery("line", "first")
 			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, biliobj.GetPlayUrl()))
 		case "youtube":
 			ytbObj := &liveurls.Youtube{}
