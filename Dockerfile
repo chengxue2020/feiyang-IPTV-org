@@ -2,15 +2,8 @@ FROM golang:1.19-alpine AS build
 
 WORKDIR /app
 
-COPY ./Golang/go.mod ./
-COPY ./Golang/go.sum ./
+COPY ./Golang/* ./
 RUN go mod download
-
-COPY ./Golang/*.go ./
-COPY ./Golang/list/*.go ./list/
-COPY ./Golang/liveurls/*.go ./liveurls/
-COPY ./Golang/utils/*.go ./utils/
-
 RUN go build -o /allinone
 
 FROM alpine:3.14
