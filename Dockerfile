@@ -9,6 +9,7 @@ RUN go mod download
 COPY ./Golang/*.go ./
 COPY ./Golang/list/*.go ./list/
 COPY ./Golang/liveurls/*.go ./liveurls/
+COPY ./Golang/utils/*.go ./utils/
 
 RUN go build -o /allinone
 
