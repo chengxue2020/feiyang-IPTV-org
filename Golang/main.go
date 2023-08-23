@@ -153,8 +153,7 @@ func setupRouter(adurl string) *gin.Engine {
 		case "douyu":
 			douyuobj := &liveurls.Douyu{}
 			douyuobj.Rid = rid
-			douyuobj.Stream_type = c.DefaultQuery("stream", "hls")
-			douyuobj.Cdn_type = c.DefaultQuery("cdn", "openhls-tct")
+			douyuobj.Stream_type = c.DefaultQuery("stream", "flv")
 			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, douyuobj.GetRealUrl()))
 		case "huya":
 			huyaobj := &liveurls.Huya{}
