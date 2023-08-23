@@ -1,4 +1,5 @@
 # **使用说明：**  
+如果你没有软路由或者服务器，那么推荐白嫖Vercel使用，[点击查看部署方法](https://github.com/papagaye744/iptv-go)！
 ## 一、推荐使用Docker一键运行，并配置watchtower监听Docker镜像更新，直接一劳永逸：
 ### 1，使用Docker一键配置allinone
 ```
