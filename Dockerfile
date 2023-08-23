@@ -2,7 +2,7 @@ FROM golang:1.19-alpine AS build
 
 WORKDIR /app
 
-COPY ./Golang/* ./
+COPY ./Golang/ ./
 RUN go mod download
 RUN go build -o /allinone
 
