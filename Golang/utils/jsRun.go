@@ -10,12 +10,31 @@ package utils
 import (
 	"fmt"
 	js "github.com/dop251/goja"
+	"sync"
 )
 
-type JsUtil struct{}
+type JsUtil struct {
+	pool sync.Pool
+}
+
+func (j *JsUtil) getVm() *js.Runtime {
+	v := j.pool.Get()
+	if v != nil {
+		vm := v.(*js.Runtime)
+		vm.Set("global", vm.NewObject()) // 重置或清理全局对象
+		return vm
+	}
+	return js.New()
+}
+
+func (j *JsUtil) putVm(vm *js.Runtime) {
+	vm.Set("global", nil) // 清除全局对象
+	j.pool.Put(vm)
+}
 
 func (j *JsUtil) JsRun(funcContent []string, params ...any) any {
-	vm := js.New()
+	vm := j.getVm()
+	defer j.putVm(vm)
 	_, err := vm.RunString(funcContent[0])
 	if err != nil {
 		return err
