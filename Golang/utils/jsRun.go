@@ -20,9 +20,7 @@ type JsUtil struct {
 func (j *JsUtil) getVm() *js.Runtime {
 	v := j.pool.Get()
 	if v != nil {
-		vm := v.(*js.Runtime)
-		vm.Set("global", vm.NewObject()) // 重置或清理全局对象
-		return vm
+		return v.(*js.Runtime)
 	}
 	return js.New()
 }
