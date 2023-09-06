@@ -34,14 +34,9 @@ http://你的IP:35455/yylunbo.m3u
 http://你的IP:35455/xxxyqk.m3u?url=http://192.168.10.1:35455
 ```
 ## **抖音：**
-### 1，抖音手机客户端进入直播间后，点击右下角三个点，点击分享，点击复制链接，然后运行并访问：
+### 默认最高画质，浏览器打开并复制`(live.douyin.com/)xxxxxx`，只需要复制后面的xxxxx即可（可选flv和hls两种种流媒体传输方式，默认flv）：
 ```
-http://你的IP:35455/douyin?url=https://v.douyin.com/xxxxxx(&quality=xxxx)
-```
-其中&quality参数默认origin原画，可以省略，也可以手动指定：uhd、origin、hd、sd、ld
-### 2，抖音电脑端需要打开抖音网页版复制`(live.douyin.com/)xxxxxx`，只需要复制后面的xxxxx即可：
-```
-http://你的IP:35455/douyin/xxxxx
+http://你的IP:35455/douyin/xxxxx(?stream=hls)
 ```
 ## **斗鱼：**
 ### 1，可选m3u8和flv以及xs三种流媒体传输方式【`(www.douyu.com/)xxxxxx 或 (www.douyu.com/xx/xx?rid=)xxxxxx`，默认flv】：
