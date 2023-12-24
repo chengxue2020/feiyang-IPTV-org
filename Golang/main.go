@@ -152,7 +152,7 @@ func setupRouter(adurl string) *gin.Engine {
 		case "huya":
 			huyaobj := &liveurls.Huya{}
 			huyaobj.Rid = rid
-			huyaobj.Cdn = c.DefaultQuery("cdn", "hycdn")
+			huyaobj.Cdn = c.DefaultQuery("cdn", "hwcdn")
 			huyaobj.Media = c.DefaultQuery("media", "flv")
 			huyaobj.Type = c.DefaultQuery("type", "nodisplay")
 			if huyaobj.Type == "display" {
