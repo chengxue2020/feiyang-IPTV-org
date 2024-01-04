@@ -84,6 +84,9 @@ func (h *Huya) GetLiveUrl() any {
 	}
 	liveInfoJson := gjson.Parse(liveInfoJsonRawString)
 	streamInfoJsons := liveInfoJson.Get("tLiveStreamInfo.vStreamInfo.value")
+	if len(streamInfoJsons.Array()) == 0 {
+		return nil
+	}
 	var cdnSlice []string
 	var finalurl string
 	streamInfoJsons.ForEach(func(key, value gjson.Result) bool {
