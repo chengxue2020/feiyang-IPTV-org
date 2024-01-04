@@ -44,7 +44,8 @@ func parseAntiCode(anticode string, uid int64, streamName string) (string, error
 	qr.Set("sv", "2110211124")
 	qr.Set("seqid", strconv.FormatInt(time.Now().Unix()*1000+uid, 10))
 	qr.Set("uid", strconv.FormatInt(uid, 10))
-	qr.Set("uuid", uuid.NewV4().String())
+	reluuid, _ := uuid.NewV4()
+	qr.Set("uuid", reluuid.String())
 	ss := GetMD5Hash(fmt.Sprintf("%s|%s|%s", qr.Get("seqid"), qr.Get("ctype"), qr.Get("t")))
 	wsTime := strconv.FormatInt(time.Now().Add(6*time.Hour).Unix(), 16)
 
