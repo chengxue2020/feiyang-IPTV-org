@@ -153,7 +153,12 @@ func setupRouter(adurl string) *gin.Engine {
 			huyaobj := &liveurls.Huya{}
 			huyaobj.Rid = rid
 			huyaobj.Cdn = c.DefaultQuery("cdn", "HW")
-			c.Redirect(http.StatusMovedPermanently, duanyan(adurl, huyaobj.GetLiveUrl()))
+			huyaobj.CdnType = c.DefaultQuery("cdntype", "nodisplay")
+			if huyaobj.CdnType == "display" {
+				c.JSON(200, huyaobj.GetLiveUrl())
+			} else {
+				c.Redirect(http.StatusMovedPermanently, duanyan(adurl, huyaobj.GetLiveUrl()))
+			}
 		case "bilibili":
 			biliobj := &liveurls.BiliBili{}
 			biliobj.Rid = rid

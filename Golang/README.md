@@ -70,11 +70,15 @@ http://你的IP:35455/douyu/xxxxx(?stream=flv)
 http://你的IP:35455/bilibili/xxxxxx(?platform=h5&line=first&quality=10000)
 ```
 ## **虎牙`(huya.com/)xxxxxx`：**  
-### 1，切换CDN（默认HW，可选HY、AL、TX、HS、WS）：
+### 1，查看CDN支持
+```
+http://你的IP:35455/huya/xxxxx?cdntype=display
+```
+### 2，切换CDN（默认HW，可选HY、AL、TX、HS、WS，具体支持哪些cdn，可以参考“1”）：
 ```
 http://你的IP:35455/huya/xxxxx?cdn=AL
 ```
-### 2，最后的代理链接示例：
+### 3，最后的代理链接示例：
 ```
 http://你的IP:35455/huya/xxxxx(?cdn=xxx)
 ```

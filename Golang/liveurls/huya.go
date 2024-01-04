@@ -26,8 +26,9 @@ import (
 const userAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
 
 type Huya struct {
-	Rid string
-	Cdn string
+	Rid     string
+	Cdn     string
+	CdnType string
 }
 
 func GetMD5Hash(text string) string {
@@ -83,9 +84,12 @@ func (h *Huya) GetLiveUrl() any {
 	}
 	liveInfoJson := gjson.Parse(liveInfoJsonRawString)
 	streamInfoJsons := liveInfoJson.Get("tLiveStreamInfo.vStreamInfo.value")
+	var cdnSlice []string
 	var finalurl string
 	streamInfoJsons.ForEach(func(key, value gjson.Result) bool {
-		if gjson.Get(value.String(), "sCdnType").String() == h.Cdn {
+		var cdnType = gjson.Get(value.String(), "sCdnType").String()
+		cdnSlice = append(cdnSlice, cdnType)
+		if cdnType == h.Cdn {
 			sStreamName := gjson.Get(value.String(), "sStreamName").String()
 			sFlvAntiCode := gjson.Get(value.String(), "sFlvAntiCode").String()
 			sFlvUrl := gjson.Get(value.String(), "sFlvUrl").String()
@@ -95,5 +99,8 @@ func (h *Huya) GetLiveUrl() any {
 		}
 		return true
 	})
+	if h.CdnType == "display" {
+		return cdnSlice
+	}
 	return finalurl
 }
