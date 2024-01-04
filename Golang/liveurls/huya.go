@@ -48,14 +48,12 @@ func parseAntiCode(anticode string, uid int64, streamName string) (string, error
 	qr.Set("uuid", reluuid.String())
 	ss := GetMD5Hash(fmt.Sprintf("%s|%s|%s", qr.Get("seqid"), qr.Get("ctype"), qr.Get("t")))
 	wsTime := strconv.FormatInt(time.Now().Add(6*time.Hour).Unix(), 16)
-
 	decodeString, _ := base64.StdEncoding.DecodeString(qr.Get("fm"))
 	fm := string(decodeString)
 	fm = strings.ReplaceAll(fm, "$0", qr.Get("uid"))
 	fm = strings.ReplaceAll(fm, "$1", streamName)
 	fm = strings.ReplaceAll(fm, "$2", ss)
 	fm = strings.ReplaceAll(fm, "$3", wsTime)
-
 	qr.Set("wsSecret", GetMD5Hash(fm))
 	qr.Set("ratio", "0")
 	qr.Set("wsTime", wsTime)
@@ -84,24 +82,18 @@ func (h *Huya) GetLiveUrl() any {
 		return nil
 	}
 	liveInfoJson := gjson.Parse(liveInfoJsonRawString)
-
 	streamInfoJsons := liveInfoJson.Get("tLiveStreamInfo.vStreamInfo.value")
-
 	var finalurl string
 	streamInfoJsons.ForEach(func(key, value gjson.Result) bool {
 		if gjson.Get(value.String(), "sCdnType").String() == h.Cdn {
-
 			sStreamName := gjson.Get(value.String(), "sStreamName").String()
 			sFlvAntiCode := gjson.Get(value.String(), "sFlvAntiCode").String()
 			sFlvUrl := gjson.Get(value.String(), "sFlvUrl").String()
 			uid := rand.Int63n(99999999999) + 1400000000000
-
 			query, _ := parseAntiCode(sFlvAntiCode, uid, sStreamName)
-			finalurl = fmt.Sprintf("%s/%s.flv?%s", sFlvUrl, sStreamName, query)
-
+			finalurl = strings.Replace(fmt.Sprintf("%s/%s.flv?%s", sFlvUrl, sStreamName, query), "http://", "https://", 1)
 		}
 		return true
 	})
-
 	return finalurl
 }
