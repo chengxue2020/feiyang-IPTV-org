@@ -76,7 +76,8 @@ function extractInfo($content, $cdn, $cdnType, $mediaurl)
     }
 
     if ($cdnType == "display") {
-        return $cdnSlice;
+        var_dump($cdnSlice);
+        exit();
     }
 
     return $finalurl;
