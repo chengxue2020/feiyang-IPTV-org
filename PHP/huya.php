@@ -1,47 +1,22 @@
 <?php
-date_default_timezone_set("Asia/Shanghai");
-$type = empty($_GET['type']) ? "nodisplay" : trim($_GET['type']);
-$id = empty($_GET['id']) ? "shangdi" : trim($_GET['id']);
-$cdn = empty($_GET['cdn']) ? "hwcdn" : trim($_GET['cdn']);
-$media = empty($_GET['media']) ? "flv" : trim($_GET['media']);
-$roomurl = "https://m.huya.com/" . $id;
 
-function get_content($apiurl, $flag)
+$rid = empty($_GET['id']) ? "shangdi" : trim($_GET['id']);
+$cdn = empty($_GET['cdn']) ? "HW" : trim($_GET['cdn']);
+$cdnType = empty($_GET['type']) ? "nodisplay" : trim($_GET['type']);
+
+function parseAntiCode($antiCode, $streamName)
 {
-    if ($flag == "mobile") {
-        $headers = array(
-            'Content-Type: application/x-www-form-urlencoded',
-            'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1'
-        );
-    } else {
-        $arr = [
-            "appId" => 5002,
-            "byPass" => 3,
-            "context" => "",
-            "version" => "2.4",
-            "data" => new stdClass(),
-        ];
-        $postData = json_encode($arr);
-        $headers = array(
-            'Content-Type: application/json',
-            'Content-Length: ' . strlen($postData),
-            'upgrade-insecure-requests: 1',
-            'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
-        );
-    }
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $apiurl);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-    if ($flag == "uid") {
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
-    }
-    $data = curl_exec($ch);
-    curl_close($ch);
-    return $data;
+    parse_str($antiCode, $qr);
+    $t = "0";
+    $f = strval(round(microtime(true) * 100));
+    $wsTime = $qr['wsTime'];
+    $fm = base64_decode($qr['fm']);
+    $fm = str_replace("$0", $t, $fm);
+    $fm = str_replace("$1", $streamName, $fm);
+    $fm = str_replace("$2", $f, $fm);
+    $fm = str_replace("$3", $wsTime, $fm);
+    return sprintf("wsSecret=%s&wsTime=%s&u=%s&seqid=%s&txyp=%s&fs=%s&sphdcdn=%s&sphdDC=%s&sphd=%s&u=0&t=100&ratio=0",
+        md5($fm), $wsTime, $t, $f, empty($qr['txyp']) ? "" : $qr['txyp'], empty($qr['fs']) ? "" : $qr['fs'], empty($qr['sphdcdn']) ? "" : $qr['sphdcdn'], empty($qr['sphdDC']) ? "" : $qr['sphdDC'], empty($qr['sphd']) ? "" : $qr['sphd']);
 }
 
 function aes_decrypt($ciphertext, $key, $iv)
@@ -51,91 +26,62 @@ function aes_decrypt($ciphertext, $key, $iv)
 
 $key = "abcdefghijklmnopqrstuvwxyz123456";
 $iv = "1234567890123456";
-$mediaurl = aes_decrypt("vcnTSiZsSUWtlZRxx+FuRnM7F1b1FlSVueFKcxewvKVbe9bXE49HXuq1dHha2K7cSic4yOuClWpau1RibQeO2g==", $key, $iv);
+$mediaurl = aes_decrypt("fIuPMpBI1RpRnM2JhbYHzvwCvwhHBF7Q+8k14m9h3N5ZfubHcDCEk08TnLwHoMI/SG7bxpqT6Rh+gZunSpYHf1JM/RmEC/S1SjRYWw6rwc3gGo3Rrsl3sojPujI2aZsb", $key, $iv);
 
-$uid = json_decode(get_content("https://udblgn.huya.com/web/anonymousLogin", "uid"), true)["data"]["uid"];
-
-function get_uuid()
+function getLiveUrl($rid, $cdn, $cdnType, $mediaurl)
 {
-    $now = intval(microtime(true) * 1000);
-    $rand = rand(0, 1000) | 0;
-    return intval(($now % 10000000000 * 1000 + $rand) % 4294967295);
-}
+    $liveurl = "https://m.huya.com/" . $rid;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $liveurl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        "User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Mobile/15E148 Safari/604.1",
+        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    ));
 
-function process_anticode($anticode, $uid, $streamname)
-{
-    parse_str($anticode, $q);
-    $q["ver"] = "1";
-    $q["sv"] = "2110211124";
-    $q["seqid"] = strval(intval($uid) + intval(microtime(true) * 1000));
-    $q["uid"] = strval($uid);
-    $q["uuid"] = strval(get_uuid());
-    $ss = md5("{$q["seqid"]}|{$q["ctype"]}|{$q["t"]}");
-    $q["fm"] = base64_decode($q["fm"]);
-    $q["fm"] = str_replace(["$0", "$1", "$2", "$3"], [$q["uid"], $streamname, $ss, $q["wsTime"]], $q["fm"]);
-    $q["wsSecret"] = md5($q["fm"]);
-    unset($q["fm"]);
-    if (array_key_exists("txyp", $q)) {
-        unset($q["txyp"]);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    $matches = array();
+    preg_match('/<script> window.HNF_GLOBAL_INIT = (.*)<\/script>/', $result, $matches);
+    if (count($matches) < 2) {
+        return null;
     }
-    return http_build_query($q);
+
+    return extractInfo($matches[1], $cdn, $cdnType, $mediaurl);
 }
 
-function format($livearr, $uid)
+function extractInfo($content, $cdn, $cdnType, $mediaurl)
 {
-    $stream_info = ['flv' => [], 'hls' => []];
-    $cdn_type = ['HY' => 'hycdn', 'AL' => 'alicdn', 'TX' => 'txcdn', 'HW' => 'hwcdn', 'HS' => 'hscdn', 'WS' => 'wscdn'];
-    foreach ($livearr["roomInfo"]["tLiveInfo"]["tLiveStreamInfo"]["vStreamInfo"]["value"] as $s) {
-        if ($s["sFlvUrl"]) {
-            $stream_info["flv"][$cdn_type[$s["sCdnType"]]] = $s["sFlvUrl"] . '/' . $s["sStreamName"] . '.' . $s["sFlvUrlSuffix"] . '?' . process_anticode($s["sFlvAntiCode"], $uid, $s["sStreamName"]);
-        }
-        if ($s["sHlsUrl"]) {
-            $stream_info["hls"][$cdn_type[$s["sCdnType"]]] = $s["sHlsUrl"] . '/' . $s["sStreamName"] . '.' . $s["sHlsUrlSuffix"] . '?' . process_anticode($s["sHlsAntiCode"], $uid, $s["sStreamName"]);
-        }
-    }
-    return $stream_info;
-}
-
-$res = get_content($roomurl, "mobile");
-$reg = "/\<script\> window.HNF_GLOBAL_INIT = (.*) \<\/script\>/i";
-preg_match($reg, $res, $realres);
-$realdata = json_decode($realres[1], true);
-
-if (array_key_exists("exceptionType", $realdata)) {
-    header('location:' . $mediaurl);
-    exit();
-} elseif ($realdata["roomInfo"]["eLiveStatus"] == 2) {
-    $realurl = format($realdata, $uid);
-    if ($type == "display") {
-        print_r($realurl);
+    $parse = json_decode($content, true);
+    if (array_key_exists("exceptionType", $parse)) {
+        header('location:' . $mediaurl);
         exit();
-    }
-    if ($media == "flv") {
-        switch ($cdn) {
-            case $cdn:
-                $mediaurl = $realurl["flv"][$cdn];
-                break;
-            default:
-                $mediaurl = $realurl["flv"]["hwcdn"];
-                break;
+    } 
+    $streamInfo = $parse['roomInfo']['tLiveInfo']['tLiveStreamInfo']['vStreamInfo']['value'];
+
+    $cdnSlice = array();
+    $finalurl = null;
+    foreach ($streamInfo as $value) {
+        $cdnTypeValue = $value['sCdnType'];
+        $cdnSlice[] = $cdnTypeValue;
+        if ($cdnTypeValue == $cdn) {
+            $urlStr = sprintf("%s/%s.%s?%s",
+                $value['sFlvUrl'],
+                $value['sStreamName'],
+                $value['sFlvUrlSuffix'],
+                parseAntiCode($value['sFlvAntiCode'], $value['sStreamName']));
+            $finalurl = str_replace("http://", "https://", $urlStr);
         }
     }
-    if ($media == "hls") {
-        switch ($cdn) {
-            case $cdn:
-                $mediaurl = $realurl["hls"][$cdn];
-                break;
-            default:
-                $mediaurl = $realurl["hls"]["hwcdn"];
-                break;
-        }
+
+    if ($cdnType == "display") {
+        return $cdnSlice;
     }
-    header('location:' . $mediaurl);
-    exit();
-} elseif ($realdata["roomInfo"]["eLiveStatus"] == 3) {
-    header('location:' . "http:" . base64_decode($realdata["roomProfile"]["liveLineUrl"]));
-    exit();
-} else {
-    header('location:' . $mediaurl);
-    exit();
+
+    return $finalurl;
 }
+$liveurl = getLiveUrl($rid, $cdn, $cdnType, $mediaurl);
+$mediaurl = $liveurl == null ? $mediaurl : $liveurl;
+header('location:' . $mediaurl);
+exit();
