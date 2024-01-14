@@ -58,7 +58,7 @@ function getDouYinUrl($rid, $stream,$cookietext)
             if ($stream == "flv") {
                 $realurl = $val['origin']['main']['flv'];
             } elseif ($stream == "hls") {
-                $realurl = $val['data']['origin']['main']['hls'];
+                $realurl = $val['origin']['main']['hls'];
             }
         }
     }
